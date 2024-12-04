@@ -30,7 +30,7 @@ namespace BookSystem
 
             if (IsValidUser(username, password))
             {
-                if (username == "admin01")
+                if (username == "admin01" || username == "ADMIN01")
                 {
                     frmAdmin frmadmin = new frmAdmin();
                     this.Hide();
@@ -62,6 +62,11 @@ namespace BookSystem
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private bool IsValidUser(string admin, string password)

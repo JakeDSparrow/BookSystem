@@ -105,6 +105,7 @@
             this.Controls.Add(this.lblReturnBook);
             this.Controls.Add(this.lblBorrowbook);
             this.Name = "frmUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUser";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -68,6 +68,7 @@
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.label1);
             this.Name = "frmReturn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReturn";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -21,6 +21,7 @@ namespace BookSystem
         {
             frmAddBook frmAddBook = new frmAddBook();
             frmAddBook.ShowDialog();
+            this.Hide();
         }
 
         private void lblLogout_Click(object sender, EventArgs e)
