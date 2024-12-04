@@ -32,7 +32,7 @@
             this.lblRefresh = new System.Windows.Forms.Label();
             this.lblAddbook = new System.Windows.Forms.Label();
             this.lblRemoveBook = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,11 +47,12 @@
             // 
             // lblRefresh
             // 
+            this.lblRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRefresh.Location = new System.Drawing.Point(642, 81);
             this.lblRefresh.Name = "lblRefresh";
             this.lblRefresh.Size = new System.Drawing.Size(100, 23);
             this.lblRefresh.TabIndex = 1;
-            this.lblRefresh.Text = "label1";
+            this.lblRefresh.Text = "Refresh";
             // 
             // lblAddbook
             // 
@@ -73,12 +74,12 @@
             this.lblRemoveBook.TabIndex = 3;
             this.lblRemoveBook.Text = "Remove Book";
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(272, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtSearch.Location = new System.Drawing.Point(272, 71);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(232, 20);
+            this.txtSearch.TabIndex = 4;
             // 
             // btnSearch
             // 
@@ -95,13 +96,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 386);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblRemoveBook);
             this.Controls.Add(this.lblAddbook);
             this.Controls.Add(this.lblRefresh);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -114,7 +116,7 @@
         private System.Windows.Forms.Label lblRefresh;
         private System.Windows.Forms.Label lblAddbook;
         private System.Windows.Forms.Label lblRemoveBook;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
     }
 }
