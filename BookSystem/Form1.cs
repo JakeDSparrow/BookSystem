@@ -34,9 +34,9 @@ namespace BookSystem
                     frmAdmin frmadmin = new frmAdmin();
                     frmadmin.ShowDialog();
                 }
-                else if(username == "user01")
+                else 
                 {
-                    frmUser frmUser = new frmUser();
+                    frmUser frmUser = new frmUser(username);
                     frmUser.ShowDialog();
                 }
 
@@ -48,6 +48,12 @@ namespace BookSystem
             }
         }
 
+        private void lblSignup_Click(object sender, EventArgs e)
+        {
+            frmSignUp frmSignUp = new frmSignUp();
+            frmSignUp.ShowDialog();
+            this.Hide();
+        }
 
         private bool IsValidUser(string admin, string password)
         {

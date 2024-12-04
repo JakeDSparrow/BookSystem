@@ -12,14 +12,16 @@ namespace BookSystem
 {
     public partial class frmReturn : Form
     {
-        public frmReturn()
+        private string _username;
+        public frmReturn(string username)
         {
             InitializeComponent();
+            _username = username;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            frmUser user = new frmUser();   
+            frmUser user = new frmUser(_username);   
             user.ShowDialog();
             this.Close();
         }

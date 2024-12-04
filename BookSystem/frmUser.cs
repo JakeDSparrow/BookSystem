@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BookSystem
 {
     public partial class frmUser : Form
     {
+        private string _username;
+
         public frmUser()
         {
+        }
+
+        public frmUser(string username)
+        {
             InitializeComponent();
+            _username = username;
         }
 
         private void lblBorrowbook_Click(object sender, EventArgs e)
@@ -25,7 +33,7 @@ namespace BookSystem
 
         private void lblReturnBook_Click(object sender, EventArgs e)
         {
-            frmReturn frmReturn = new frmReturn();
+            frmReturn frmReturn = new frmReturn(_username);
             frmReturn.ShowDialog();
         }
     }
