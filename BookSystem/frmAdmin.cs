@@ -22,10 +22,5 @@ namespace BookSystem
             frmAddBook frmAddBook = new frmAddBook();
             frmAddBook.ShowDialog();
         }
-
-        private void frmAdmin_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
