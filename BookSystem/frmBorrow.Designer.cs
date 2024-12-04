@@ -71,10 +71,11 @@
             // 
             this.btnBorrow.Location = new System.Drawing.Point(178, 200);
             this.btnBorrow.Name = "btnBorrow";
-            this.btnBorrow.Size = new System.Drawing.Size(94, 23);
+            this.btnBorrow.Size = new System.Drawing.Size(134, 23);
             this.btnBorrow.TabIndex = 14;
             this.btnBorrow.Text = "Borrow Book";
             this.btnBorrow.UseVisualStyleBackColor = true;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
             // label4
             // 

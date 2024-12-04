@@ -16,5 +16,12 @@ namespace BookSystem
         {
             InitializeComponent();
         }
+
+        private void btnBorrow_Click(object sender, EventArgs e)
+        {
+            frmUser frmUser = new frmUser();
+            frmUser.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -48,6 +48,7 @@
             this.btnReturn.TabIndex = 14;
             this.btnReturn.Text = "Return Book";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // label1
             // 
