@@ -63,6 +63,16 @@ namespace BookSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg {
+            get {
+                object obj = ResourceManager.GetObject("bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Green_Brown_Modern_National_Library_Workers_Day_Instagram_Post {
             get {
                 object obj = ResourceManager.GetObject("Green Brown Modern National Library Workers Day Instagram Post", resourceCulture);
@@ -96,6 +106,56 @@ namespace BookSystem.Properties {
         internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__1_2 {
             get {
                 object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__1_3 {
+            get {
+                object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (1)3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__1_4 {
+            get {
+                object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (1)4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pp {
+            get {
+                object obj = ResourceManager.GetObject("pp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

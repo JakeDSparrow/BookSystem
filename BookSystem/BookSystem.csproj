@@ -169,5 +169,23 @@
   <ItemGroup>
     <None Include="Resources\White and Light Blue Illustrative Creative Literature Project Presentation1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%293.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%294.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

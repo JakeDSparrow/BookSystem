@@ -90,7 +90,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(322, 398);
+            this.btnAdd.Location = new System.Drawing.Point(303, 398);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 28);
             this.btnAdd.TabIndex = 4;
