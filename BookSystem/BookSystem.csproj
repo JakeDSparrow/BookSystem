@@ -125,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="libraryminiDataSet.xsc">
       <DependentUpon>libraryminiDataSet.xsd</DependentUpon>
@@ -149,6 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%291.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

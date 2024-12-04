@@ -42,36 +42,44 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Book Title:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(12, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Author:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(12, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(95, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Book Volume:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(12, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(70, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Quantity:";
             // 
@@ -87,37 +95,38 @@
             // 
             // txtBooktitle
             // 
-            this.txtBooktitle.Location = new System.Drawing.Point(76, 26);
+            this.txtBooktitle.Location = new System.Drawing.Point(130, 28);
             this.txtBooktitle.Name = "txtBooktitle";
-            this.txtBooktitle.Size = new System.Drawing.Size(330, 20);
+            this.txtBooktitle.Size = new System.Drawing.Size(310, 20);
             this.txtBooktitle.TabIndex = 6;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(76, 70);
+            this.txtAuthor.Location = new System.Drawing.Point(130, 69);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(330, 20);
+            this.txtAuthor.Size = new System.Drawing.Size(310, 20);
             this.txtAuthor.TabIndex = 7;
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(76, 153);
+            this.txtQuantity.Location = new System.Drawing.Point(130, 159);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(330, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(310, 20);
             this.txtQuantity.TabIndex = 8;
             // 
             // txtVolume
             // 
-            this.txtVolume.Location = new System.Drawing.Point(91, 117);
+            this.txtVolume.Location = new System.Drawing.Point(130, 116);
             this.txtVolume.Name = "txtVolume";
-            this.txtVolume.Size = new System.Drawing.Size(315, 20);
+            this.txtVolume.Size = new System.Drawing.Size(310, 20);
             this.txtVolume.TabIndex = 9;
             // 
             // frmAddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 233);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
+            this.ClientSize = new System.Drawing.Size(476, 265);
             this.Controls.Add(this.txtVolume);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtAuthor);

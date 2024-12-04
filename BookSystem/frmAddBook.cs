@@ -20,6 +20,8 @@ namespace BookSystem
         public string booktitle, author;
         public int quantity, volumenum;
 
+        
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             /*booktitle = txtBooktitle.Text;
