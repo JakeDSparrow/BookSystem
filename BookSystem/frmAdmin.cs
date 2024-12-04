@@ -19,12 +19,13 @@ namespace BookSystem
 
         private void lblAddbook_Click(object sender, EventArgs e)
         {
-
+            frmAddBook frmAddBook = new frmAddBook();
+            frmAddBook.ShowDialog();
         }
 
         private void frmAdmin_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

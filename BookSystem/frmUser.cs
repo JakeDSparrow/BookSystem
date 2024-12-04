@@ -16,5 +16,17 @@ namespace BookSystem
         {
             InitializeComponent();
         }
+
+        private void lblBorrowbook_Click(object sender, EventArgs e)
+        {
+            frmBorrow frmBorrow = new frmBorrow();
+            frmBorrow.ShowDialog();
+        }
+
+        private void lblReturnBook_Click(object sender, EventArgs e)
+        {
+            frmReturn frmReturn = new frmReturn();
+            frmReturn.ShowDialog();
+        }
     }
 }

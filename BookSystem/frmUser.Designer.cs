@@ -44,6 +44,7 @@
             this.lblBorrowbook.Size = new System.Drawing.Size(100, 23);
             this.lblBorrowbook.TabIndex = 3;
             this.lblBorrowbook.Text = "Borrow Book";
+            this.lblBorrowbook.Click += new System.EventHandler(this.lblBorrowbook_Click);
             // 
             // lblReturnBook
             // 
@@ -53,6 +54,7 @@
             this.lblReturnBook.Size = new System.Drawing.Size(100, 23);
             this.lblReturnBook.TabIndex = 4;
             this.lblReturnBook.Text = "Return Book";
+            this.lblReturnBook.Click += new System.EventHandler(this.lblReturnBook_Click);
             // 
             // dataGridView1
             // 
