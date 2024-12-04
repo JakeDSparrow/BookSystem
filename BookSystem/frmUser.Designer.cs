@@ -30,11 +30,11 @@
         {
             this.lblBorrowbook = new System.Windows.Forms.Label();
             this.lblReturnBook = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblLogout = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBorrowbook
@@ -57,13 +57,13 @@
             this.lblReturnBook.Text = "Return Book";
             this.lblReturnBook.Click += new System.EventHandler(this.lblReturnBook_Click);
             // 
-            // dataGridView1
+            // dgvBooks
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(553, 265);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Location = new System.Drawing.Point(13, 116);
+            this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.Size = new System.Drawing.Size(553, 265);
+            this.dgvBooks.TabIndex = 5;
             // 
             // btnSearch
             // 
@@ -101,13 +101,13 @@
             this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.lblReturnBook);
             this.Controls.Add(this.lblBorrowbook);
             this.Name = "frmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUser";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,7 +117,7 @@
 
         private System.Windows.Forms.Label lblBorrowbook;
         private System.Windows.Forms.Label lblReturnBook;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBooks;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblLogout;

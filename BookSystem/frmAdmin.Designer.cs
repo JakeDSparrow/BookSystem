@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.lblRefresh = new System.Windows.Forms.Label();
             this.lblAddbook = new System.Windows.Forms.Label();
             this.lblRemoveBook = new System.Windows.Forms.Label();
@@ -36,18 +36,18 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLogout = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvBooks
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 216);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvBooks.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Location = new System.Drawing.Point(13, 110);
+            this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.Size = new System.Drawing.Size(644, 216);
+            this.dgvBooks.TabIndex = 0;
             // 
             // lblRefresh
             // 
@@ -59,6 +59,7 @@
             this.lblRefresh.TabIndex = 1;
             this.lblRefresh.Text = "Refresh";
             this.lblRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRefresh.Click += new System.EventHandler(this.lblRefresh_Click);
             // 
             // lblAddbook
             // 
@@ -85,6 +86,7 @@
             this.lblRemoveBook.TabIndex = 3;
             this.lblRemoveBook.Text = "Remove Book";
             this.lblRemoveBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRemoveBook.Click += new System.EventHandler(this.lblRemoveBook_Click);
             // 
             // txtSearch
             // 
@@ -108,13 +110,14 @@
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BookSystem.Properties.Resources.pp;
             this.pictureBox1.Location = new System.Drawing.Point(0, -212);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(709, 867);
+            this.pictureBox1.Size = new System.Drawing.Size(691, 829);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -143,13 +146,14 @@
             this.Controls.Add(this.lblRemoveBook);
             this.Controls.Add(this.lblAddbook);
             this.Controls.Add(this.lblRefresh);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmin";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,7 +162,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBooks;
         private System.Windows.Forms.Label lblRefresh;
         private System.Windows.Forms.Label lblAddbook;
         private System.Windows.Forms.Label lblRemoveBook;
