@@ -33,6 +33,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblLogout = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,11 +81,24 @@
             this.txtSearch.Size = new System.Drawing.Size(232, 20);
             this.txtSearch.TabIndex = 6;
             // 
+            // lblLogout
+            // 
+            this.lblLogout.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblLogout.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.Location = new System.Drawing.Point(505, 20);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(63, 23);
+            this.lblLogout.TabIndex = 8;
+            this.lblLogout.Text = "Log Out?";
+            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 393);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataGridView1);
@@ -105,5 +119,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblLogout;
     }
 }

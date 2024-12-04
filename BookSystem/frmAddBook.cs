@@ -20,8 +20,6 @@ namespace BookSystem
         public string booktitle, author;
         public int quantity, volumenum;
 
-        
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             /*booktitle = txtBooktitle.Text;
@@ -32,7 +30,6 @@ namespace BookSystem
             MessageBox.Show("Book added successfully.");
             frmAdmin frmAdmin = new frmAdmin();
             frmAdmin.ShowDialog();
-            this.Close();
         }
     }
 }

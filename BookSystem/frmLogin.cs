@@ -42,13 +42,13 @@ namespace BookSystem
                     this.Hide();
                     frmUser.ShowDialog();
                 }
-
-                this.Hide();
             }
             else
             {
                 MessageBox.Show("Invalid username or password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            this.Hide();
         }
 
         //for signup button...

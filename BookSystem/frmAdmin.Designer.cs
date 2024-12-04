@@ -35,6 +35,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblLogout = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             // 
             this.lblRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblRefresh.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRefresh.Location = new System.Drawing.Point(594, 41);
+            this.lblRefresh.Location = new System.Drawing.Point(594, 44);
             this.lblRefresh.Name = "lblRefresh";
             this.lblRefresh.Size = new System.Drawing.Size(63, 23);
             this.lblRefresh.TabIndex = 1;
@@ -118,12 +119,25 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // lblLogout
+            // 
+            this.lblLogout.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblLogout.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.Location = new System.Drawing.Point(594, 9);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(63, 23);
+            this.lblLogout.TabIndex = 7;
+            this.lblLogout.Text = "Log Out?";
+            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BookSystem.Properties.Resources.Minimal_World_Book_Public_Library_Education_Logo_Template__1_3;
             this.ClientSize = new System.Drawing.Size(669, 439);
+            this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblRemoveBook);
@@ -150,5 +164,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblLogout;
     }
 }

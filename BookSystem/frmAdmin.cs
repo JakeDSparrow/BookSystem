@@ -22,5 +22,13 @@ namespace BookSystem
             frmAddBook frmAddBook = new frmAddBook();
             frmAddBook.ShowDialog();
         }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            this.Close();
+            frmLogin.Show();
+        }
     }
 }

@@ -21,9 +21,7 @@ namespace BookSystem
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            frmUser user = new frmUser(_username);   
-            user.ShowDialog();
-            this.Close();
+            //FUNCTION FOR UPDATE
         }
     }
 }
