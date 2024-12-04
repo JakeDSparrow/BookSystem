@@ -29,21 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.progessBar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // progessBar
-            // 
-            this.progessBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
-            this.progessBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
-            this.progessBar.Location = new System.Drawing.Point(133, 386);
-            this.progessBar.Name = "progessBar";
-            this.progessBar.Size = new System.Drawing.Size(467, 23);
-            this.progessBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progessBar.TabIndex = 0;
             // 
             // timer1
             // 
@@ -67,7 +56,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(700, 517);
-            this.Controls.Add(this.progessBar);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -82,7 +70,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progessBar;
+        private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
