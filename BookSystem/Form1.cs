@@ -21,6 +21,7 @@ namespace BookSystem
             InitializeComponent();
         }
 
+        //for login button...
         private void btnLogin_Click(object sender, EventArgs e)
         {
             username = txtUsername.Text;
@@ -48,6 +49,7 @@ namespace BookSystem
             }
         }
 
+        //for signup button...
         private void lblSignup_Click(object sender, EventArgs e)
         {
             frmSignUp frmSignUp = new frmSignUp();
