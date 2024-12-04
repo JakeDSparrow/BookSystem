@@ -157,5 +157,17 @@
   <ItemGroup>
     <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%291.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%292.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green Brown Modern National Library Workers Day Instagram Post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White and Light Blue Illustrative Creative Literature Project Presentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White and Light Blue Illustrative Creative Literature Project Presentation1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

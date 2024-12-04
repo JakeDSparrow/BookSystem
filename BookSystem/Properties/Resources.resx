@@ -118,10 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="White and Light Blue Illustrative Creative Literature Project Presentation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\White and Light Blue Illustrative Creative Literature Project Presentation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Green Brown Modern National Library Workers Day Instagram Post" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Green Brown Modern National Library Workers Day Instagram Post.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minimal World Book Public Library Education Logo Template (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minimal World Book Public Library Education Logo Template (1)2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Minimal World Book Public Library Education Logo Template (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimal World Book Public Library Education Logo Template (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Minimal World Book Public Library Education Logo Template (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimal World Book Public Library Education Logo Template (1)1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="White and Light Blue Illustrative Creative Literature Project Presentation1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\White and Light Blue Illustrative Creative Literature Project Presentation1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

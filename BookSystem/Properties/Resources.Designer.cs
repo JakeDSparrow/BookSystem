@@ -63,6 +63,16 @@ namespace BookSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Green_Brown_Modern_National_Library_Workers_Day_Instagram_Post {
+            get {
+                object obj = ResourceManager.GetObject("Green Brown Modern National Library Workers Day Instagram Post", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__1_ {
             get {
                 object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (1)", resourceCulture);
@@ -76,6 +86,36 @@ namespace BookSystem.Properties {
         internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__1_1 {
             get {
                 object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap White_and_Light_Blue_Illustrative_Creative_Literature_Project_Presentation {
+            get {
+                object obj = ResourceManager.GetObject("White and Light Blue Illustrative Creative Literature Project Presentation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap White_and_Light_Blue_Illustrative_Creative_Literature_Project_Presentation1 {
+            get {
+                object obj = ResourceManager.GetObject("White and Light Blue Illustrative Creative Literature Project Presentation1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
