@@ -33,11 +33,13 @@ namespace BookSystem
                 if (username == "admin01")
                 {
                     frmAdmin frmadmin = new frmAdmin();
+                    this.Hide();
                     frmadmin.ShowDialog();
                 }
                 else 
                 {
                     frmUser frmUser = new frmUser(username);
+                    this.Hide();
                     frmUser.ShowDialog();
                 }
 
