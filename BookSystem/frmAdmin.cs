@@ -16,5 +16,10 @@ namespace BookSystem
         {
             InitializeComponent();
         }
+
+        private void lblAddbook_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
