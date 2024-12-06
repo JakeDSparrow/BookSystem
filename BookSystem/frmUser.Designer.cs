@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUser));
             this.lblBorrowbook = new System.Windows.Forms.Label();
             this.lblReturnBook = new System.Windows.Forms.Label();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
@@ -104,6 +105,7 @@
             this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.lblReturnBook);
             this.Controls.Add(this.lblBorrowbook);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUser";

@@ -194,9 +194,6 @@
     <None Include="Resources\Minimal World Book Public Library Education Logo Template %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Minimal World Book Public Library Education Logo Template %282%29.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\pp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
