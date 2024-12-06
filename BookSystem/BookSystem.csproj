@@ -196,5 +196,12 @@
   <ItemGroup>
     <None Include="Resources\pp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\8664917_window_minimize_icon.ico" />
+    <Content Include="Resources\Back.png" />
+    <Content Include="Resources\Left Arrow.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\Search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

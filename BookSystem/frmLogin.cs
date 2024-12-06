@@ -74,7 +74,7 @@ namespace BookSystem
 
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                System.Environment.Exit(0);
             }
         }
 

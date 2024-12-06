@@ -30,7 +30,7 @@ namespace BookSystem
         }
 
         //search button modified
-        private void LoadBooks(string searchQuery = "")
+        private void LoadBooks(string searchQuery = "", string orderByColumn = "bookid", string sortDirection = "ASC")
         {
             try
             {
@@ -38,12 +38,14 @@ namespace BookSystem
                 {
                     conn.Open();
 
-                    string query = "SELECT booktitle, author, genre, volume, quantity, status FROM Books";
+                    string query = "SELECT * FROM Books";
 
                     if (!string.IsNullOrEmpty(searchQuery))
                     {
                         query += " WHERE CONCAT(booktitle, author, volume, quantity) LIKE @search";
                     }
+
+                    query += $" ORDER BY {orderByColumn} {sortDirection}";//added by chatgpt, unfunctional
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -67,7 +69,86 @@ namespace BookSystem
             }
         }
 
+        private void RemoveBook() 
+        {
+            if (dgvBooks.SelectedRows.Count > 0)
+            {
+                string bookId = dgvBooks.SelectedRows[0].Cells["bookid"].Value.ToString();
+                string bookTitle = dgvBooks.SelectedRows[0].Cells["booktitle"].Value.ToString();
+                string genre = dgvBooks.SelectedRows[0].Cells["genre"].Value.ToString();
+                string author = dgvBooks.SelectedRows[0].Cells["author"].Value.ToString();
+                int volume = Convert.ToInt32(dgvBooks.SelectedRows[0].Cells["volume"].Value);
+                int quantity = Convert.ToInt32(dgvBooks.SelectedRows[0].Cells["quantity"].Value);
 
+                DialogResult result = MessageBox.Show("Are you sure you want to archive this book?", "Archive Book", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                   
+                    string archiveQuery = @"
+                        INSERT INTO archive (bookid, booktitle, genre, volume, quantity, username, borrow_date, return_date) 
+                        VALUES (@bookid, @booktitle, @genre, @volume, @quantity, @username, @borrow_date, @return_date)";
+                    
+                    string updateQuery = "UPDATE books SET status = @status WHERE bookid = @bookid";
+                    
+                    using (SqlConnection con = classcon.GetConnection())
+                    {
+                        con.Open();
+
+                        using (SqlTransaction transaction = con.BeginTransaction())
+                        {
+                            try
+                            {
+                                using (SqlCommand archiveCmd = new SqlCommand(archiveQuery, con, transaction))
+                                {
+                                    archiveCmd.Parameters.AddWithValue("@bookid", bookId);
+                                    archiveCmd.Parameters.AddWithValue("@booktitle", bookTitle);
+                                    archiveCmd.Parameters.AddWithValue("@genre", genre);
+                                    archiveCmd.Parameters.AddWithValue("@volume", volume);
+                                    archiveCmd.Parameters.AddWithValue("@quantity", quantity);
+                                    //added by chatgpt, kapag may nanghiram na with set the user name and the dates
+                                    archiveCmd.Parameters.AddWithValue("@username", DBNull.Value); // Set NULL for now
+                                    archiveCmd.Parameters.AddWithValue("@borrow_date", DBNull.Value); // Set NULL for now
+                                    archiveCmd.Parameters.AddWithValue("@return_date", DBNull.Value); // Set NULL for now
+
+                                    archiveCmd.ExecuteNonQuery();
+                                }
+
+                                using (SqlCommand updateCmd = new SqlCommand(updateQuery, con, transaction))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@status", "Archived");
+                                    updateCmd.Parameters.AddWithValue("@bookid", bookId);
+
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                    if (rowsAffected > 0)
+                                    {
+                                        dgvBooks.SelectedRows[0].Cells["status"].Value = "Archived";
+                                        MessageBox.Show("Book archived successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                    else
+                                    {
+                                        throw new Exception("Failed to update the book status in the database.");
+                                    }
+                                }
+
+                                
+                                transaction.Commit();
+                            }
+                            catch (Exception ex)
+                            {
+                                
+                                transaction.Rollback();
+                                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to archive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
         private void lblLogout_Click(object sender, EventArgs e)
         {
@@ -95,41 +176,7 @@ namespace BookSystem
 
         private void lblRemoveBook_Click(object sender, EventArgs e)
         {
-            if (dgvBooks.SelectedRows.Count > 0) 
-            {
-                string bkname = (string)dgvBooks.SelectedRows[0].Cells[0].Value;
-                DialogResult result = MessageBox.Show("Are you sure you want to remove the book?", "Remove Book", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes) 
-                {
-                    string query = "DELETE FROM books WHERE booktitle = @bkname";
-                    
-                    using (SqlConnection con = classcon.GetConnection()) 
-                    {
-                        con.Open();
-                        using (cmd = new SqlCommand(query, con)) 
-                        {
-                            cmd.Parameters.AddWithValue("@bkname", bkname);
-                            int Rows = cmd.ExecuteNonQuery();
-
-                            if (Rows > 0)
-                            {
-                                // Remove the row from the DataGridView
-                                dgvBooks.Rows.RemoveAt(dgvBooks.SelectedRows[0].Index);
-                                MessageBox.Show("Book removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Failed to remove the book from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a row to remove.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            RemoveBook();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
