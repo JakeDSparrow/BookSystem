@@ -46,10 +46,8 @@ namespace BookSystem
             }
             else
             {
-                MessageBox.Show("Invalid username or password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid username or password!", "Booklat", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            this.Hide();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -72,8 +70,12 @@ namespace BookSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            
+            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private bool IsValidUser(string admin, string password)

@@ -25,8 +25,8 @@ namespace BookSystem
         private void lblAddbook_Click(object sender, EventArgs e)
         {
             frmAddBook frmAddBook = new frmAddBook();
-            frmAddBook.ShowDialog();
             this.Hide();
+            frmAddBook.ShowDialog();
         }
 
         //search button modified

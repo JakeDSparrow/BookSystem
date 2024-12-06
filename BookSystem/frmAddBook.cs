@@ -108,13 +108,19 @@ namespace BookSystem
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddBook();
+            frmAdmin frmAdmin = new frmAdmin();
+            this.Close();
+            frmAdmin.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmAdmin frmAdmin = new frmAdmin();
-            this.Close();
-            frmAdmin.Show();
+            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 
