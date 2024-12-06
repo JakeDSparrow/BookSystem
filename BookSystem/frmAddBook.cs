@@ -16,25 +16,36 @@ namespace BookSystem
         private SqlConnectionClass conn;
         private SqlCommand cmd;
 
+        private string genres, basebookId;
+
         public frmAddBook()
         {
             InitializeComponent();
             conn = new SqlConnectionClass();
             cmd = new SqlCommand();
+
+            string[] genres = {"Fantasy","Horror","Science Fiction","Educational"};
+
+            foreach (string genre in genres) 
+            {
+                cmbGenre.Items.Add(genre);
+            }
         }
 
         private void clearStuff()
         {
+            txtBookID.Clear();
             txtAuthor.Clear();
             txtBooktitle.Clear();
             txtQuantity.Clear();
+            cmbGenre.SelectedIndex = -1;
             txtVolume.Clear();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void AddBook()
         {
-
-            if (string.IsNullOrEmpty(txtBooktitle.Text) ||
+            if (string.IsNullOrEmpty(txtBookID.Text) ||
+                string.IsNullOrEmpty(txtBooktitle.Text) ||
                 string.IsNullOrEmpty(txtAuthor.Text) ||
                 string.IsNullOrEmpty(txtVolume.Text) ||
                 string.IsNullOrEmpty(txtQuantity.Text))
@@ -43,42 +54,60 @@ namespace BookSystem
                 return;
             }
 
-            int volume, quantity; 
-            
-            try 
+            int volume, quantity;
+
+            try
             {
                 volume = int.Parse(txtVolume.Text);
                 quantity = int.Parse(txtQuantity.Text);
             }
-            catch(FormatException fe) 
+            catch (FormatException)
             {
-                MessageBox.Show(fe.Message);
+                MessageBox.Show("Volume and Quantity must be valid numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            string query = "INSERT INTO books (book_title, author, volume, quantity) VALUES (@book_title, @author, @volume, @quantity)";
+            string baseBookID = txtBookID.Text;
+
+            //updated query
+            string query = "INSERT INTO books (bookid, booktitle, author, genre, volume, quantity) VALUES (@bookid, @booktitle, @author, @genre, @volume, 1)";
 
             try
             {
                 using (SqlConnection connection = conn.GetConnection())
                 {
-                    using (cmd = new SqlCommand(query, connection))
-                    {
-                        cmd.Parameters.AddWithValue("@book_title", txtBooktitle.Text);
-                        cmd.Parameters.AddWithValue("@author", txtAuthor.Text);
-                        cmd.Parameters.AddWithValue("@volume", int.Parse(txtVolume.Text));
-                        cmd.Parameters.AddWithValue("@quantity", int.Parse(txtQuantity.Text));
+                    connection.Open();
 
-                        connection.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Book added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearStuff();
+                    for (int i = 1; i <= quantity; i++) // Loops to handle each "unit" of each book
+                    {
+                        string uniqueBookID = $"{baseBookID}-{i}"; // generate unique bookid 
+
+                        using (SqlCommand cmd = new SqlCommand(query, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@bookid", uniqueBookID);
+                            cmd.Parameters.AddWithValue("@booktitle", txtBooktitle.Text);
+                            cmd.Parameters.AddWithValue("@author", txtAuthor.Text);
+                            cmd.Parameters.AddWithValue("@genre", cmbGenre.SelectedItem?.ToString() ?? "Unknown");
+                            cmd.Parameters.AddWithValue("@volume", volume);
+
+                            cmd.ExecuteNonQuery();
+                        }
                     }
+
+                    MessageBox.Show("Books added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearStuff();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddBook();
         }
 
         private void button1_Click(object sender, EventArgs e)

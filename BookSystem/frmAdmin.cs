@@ -38,11 +38,11 @@ namespace BookSystem
                 {
                     conn.Open();
 
-                    string query = "SELECT book_title, author, volume, quantity FROM Books";
+                    string query = "SELECT booktitle, author, genre, volume, quantity, status FROM Books";
 
                     if (!string.IsNullOrEmpty(searchQuery))
                     {
-                        query += " WHERE CONCAT(book_title, author, volume, quantity) LIKE @search";
+                        query += " WHERE CONCAT(booktitle, author, volume, quantity) LIKE @search";
                     }
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -102,7 +102,7 @@ namespace BookSystem
 
                 if (result == DialogResult.Yes) 
                 {
-                    string query = "DELETE FROM books WHERE book_title = @bkname";
+                    string query = "DELETE FROM books WHERE booktitle = @bkname";
                     
                     using (SqlConnection con = classcon.GetConnection()) 
                     {

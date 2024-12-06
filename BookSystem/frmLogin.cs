@@ -22,7 +22,8 @@ namespace BookSystem
         }
 
         //for login button...
-        private void btnLogin_Click(object sender, EventArgs e)
+
+        private void Login() 
         {
             username = txtUsername.Text;
             password = txtPassword.Text;
@@ -36,7 +37,7 @@ namespace BookSystem
                     this.Hide();
                     frmadmin.ShowDialog();
                 }
-                else 
+                else
                 {
                     frmUser frmUser = new frmUser(username);
                     this.Hide();
@@ -49,6 +50,11 @@ namespace BookSystem
             }
 
             this.Hide();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login();
         }
 
         //for signup button...
@@ -67,6 +73,7 @@ namespace BookSystem
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private bool IsValidUser(string admin, string password)
