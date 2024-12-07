@@ -49,6 +49,12 @@
     <Compile Include="CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDashboard.Designer.cs">
+      <DependentUpon>UserDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlConnectionClass.cs" />
+    <EmbeddedResource Include="UserDashboard.resx">
+      <DependentUpon>UserDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,11 +206,16 @@
     <None Include="Resources\pp.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\vodka.PNG" />
     <None Include="Resources\3.PNG" />
     <None Include="Resources\4.PNG" />
     <None Include="Resources\5.PNG" />
     <None Include="Resources\8-removebg-preview.png" />
+    <None Include="Resources\8-removebg-preview1.png" />
     <Content Include="Resources\8664917_window_minimize_icon.ico" />
+    <None Include="Resources\add.PNG" />
+    <None Include="Resources\add1.PNG" />
+    <None Include="Resources\add-removebg-preview.png" />
     <Content Include="Resources\Back.png" />
     <None Include="Resources\Search1.png" />
     <None Include="Resources\ss.PNG" />
@@ -219,6 +233,19 @@
     <None Include="Resources\bm-removebg-preview.png" />
     <None Include="Resources\Capture.PNG" />
     <None Include="Resources\Capture1.PNG" />
+    <None Include="Resources\bg1.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\cc-removebg-preview.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %281%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %282%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %283%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %284%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %285%29.png" />
+    <None Include="Resources\bg2.png" />
+    <None Include="Resources\bg3.png" />
+    <None Include="Resources\bg4.png" />
+    <None Include="Resources\bg5.png" />
     <Content Include="Resources\Left Arrow.png" />
     <None Include="Resources\mg.PNG" />
     <None Include="Resources\ll.PNG" />
@@ -227,8 +254,13 @@
     <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%2942.gif" />
     <None Include="Resources\output-onlinegiftools.gif" />
     <None Include="Resources\Minimal World Book Public Library Education Logo Template %282%291.png" />
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %282%292.png" />
+    <None Include="Resources\qq-removebg-preview.png" />
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %282%293.png" />
     <Content Include="Resources\refresh.png" />
     <None Include="Resources\refresh1.png" />
+    <None Include="Resources\returning_books-removebg-preview.png" />
+    <None Include="Resources\rr-removebg-preview.png" />
     <Content Include="Resources\Search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

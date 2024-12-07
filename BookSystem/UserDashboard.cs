@@ -10,21 +10,19 @@ using System.Windows.Forms;
 
 namespace BookSystem
 {
-    public partial class frmReturn : Form
+    public partial class UserDashboard : Form
     {
-        private string _username;
-        public frmReturn(string username)
+        public UserDashboard()
         {
             InitializeComponent();
-            _username = username;
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            //FUNCTION FOR UPDATE
+
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
