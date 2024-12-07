@@ -39,10 +39,10 @@ namespace BookSystem
                 }
                 else
                 {
-                    UserDashboard User = new UserDashboard(username);
-                    MessageBox.Show("Welcome, " + txtUsername.Text,"Welcome",MessageBoxButtons.OK);
+                    UserDashboard userDashboard = new UserDashboard(username); // Pass the username
+                    MessageBox.Show("Welcome, " + username, "Welcome", MessageBoxButtons.OK);
                     this.Hide();
-                    User.ShowDialog();
+                    userDashboard.ShowDialog();
                 }
             }
             else

@@ -48,21 +48,21 @@
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAuthor.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAuthor.ForeColor = System.Drawing.Color.Gray;
             this.txtAuthor.Location = new System.Drawing.Point(177, 244);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(233, 29);
+            this.txtAuthor.Size = new System.Drawing.Size(233, 30);
             this.txtAuthor.TabIndex = 16;
             this.txtAuthor.Text = "Book Author";
             // 
             // txtBooktitle
             // 
-            this.txtBooktitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBooktitle.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBooktitle.ForeColor = System.Drawing.Color.Gray;
             this.txtBooktitle.Location = new System.Drawing.Point(174, 72);
             this.txtBooktitle.Name = "txtBooktitle";
-            this.txtBooktitle.Size = new System.Drawing.Size(236, 29);
+            this.txtBooktitle.Size = new System.Drawing.Size(236, 30);
             this.txtBooktitle.TabIndex = 15;
             this.txtBooktitle.Text = "Book Title";
             // 
@@ -70,11 +70,11 @@
             // 
             this.btnBorrow.BackgroundImage = global::BookSystem.Properties.Resources.vodka1;
             this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBorrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrow.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrow.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBorrow.Location = new System.Drawing.Point(419, 394);
+            this.btnBorrow.Location = new System.Drawing.Point(402, 392);
             this.btnBorrow.Name = "btnBorrow";
-            this.btnBorrow.Size = new System.Drawing.Size(89, 33);
+            this.btnBorrow.Size = new System.Drawing.Size(106, 35);
             this.btnBorrow.TabIndex = 14;
             this.btnBorrow.Text = "Borrow Book";
             this.btnBorrow.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.Gray;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -108,7 +108,7 @@
             "20"});
             this.comboBox1.Location = new System.Drawing.Point(174, 157);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 32);
+            this.comboBox1.Size = new System.Drawing.Size(236, 30);
             this.comboBox1.TabIndex = 19;
             this.comboBox1.Text = "Book Volume";
             // 
@@ -159,10 +159,10 @@
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Gray;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(174, 317);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(264, 24);
+            this.dateTimePicker1.Size = new System.Drawing.Size(264, 25);
             this.dateTimePicker1.TabIndex = 26;
             // 
             // panel1

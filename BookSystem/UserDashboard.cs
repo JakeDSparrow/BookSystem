@@ -14,10 +14,12 @@ namespace BookSystem
     {
 
         private string _username;
+        private string Username;
+
         public UserDashboard(string username)
         {
             InitializeComponent();
-            _username = username;
+            this.Username = username;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,6 +46,11 @@ namespace BookSystem
         {
             frmBorrow frmBorrow = new frmBorrow();
             frmBorrow.Show();
+        }
+
+        private void UserDashboard_Load(object sender, EventArgs e)
+        {
+            labelWelcome.Text = $"Welcome, {Username}!";
         }
     }
 }
