@@ -150,13 +150,14 @@ namespace BookSystem
             }
         }
 
-        private void lblLogout_Click(object sender, EventArgs e)
+        //label logout
+        /*private void lblLogout_Click(object sender, EventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
             MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             this.Close();
             frmLogin.Show();
-        }
+        }*/
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -194,6 +195,11 @@ namespace BookSystem
         {
             string query = txtSearch.Text.Trim();
             LoadBooks(query);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

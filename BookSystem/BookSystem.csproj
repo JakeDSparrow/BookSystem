@@ -199,7 +199,14 @@
   <ItemGroup>
     <Content Include="Resources\8664917_window_minimize_icon.ico" />
     <Content Include="Resources\Back.png" />
+    <None Include="Resources\ss.PNG" />
+    <None Include="Resources\tt ni bugs.PNG" />
+    <None Include="Resources\Green Simple Book Store Logo.png" />
+    <None Include="Resources\kk.PNG" />
     <Content Include="Resources\Left Arrow.png" />
+    <None Include="Resources\mg.PNG" />
+    <None Include="Resources\ll.PNG" />
+    <None Include="Resources\ll1.PNG" />
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\Search.png" />
   </ItemGroup>

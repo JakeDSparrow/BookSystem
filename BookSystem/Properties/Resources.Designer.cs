@@ -83,6 +83,56 @@ namespace BookSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kk {
+            get {
+                object obj = ResourceManager.GetObject("kk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll {
+            get {
+                object obj = ResourceManager.GetObject("ll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll1 {
+            get {
+                object obj = ResourceManager.GetObject("ll1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mg {
+            get {
+                object obj = ResourceManager.GetObject("mg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Minimal_World_Book_Public_Library_Education_Logo_Template__1_ {
             get {
                 object obj = ResourceManager.GetObject("Minimal World Book Public Library Education Logo Template (1)", resourceCulture);
@@ -156,6 +206,26 @@ namespace BookSystem.Properties {
         internal static System.Drawing.Bitmap pp {
             get {
                 object obj = ResourceManager.GetObject("pp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ss {
+            get {
+                object obj = ResourceManager.GetObject("ss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tt_ni_bugs {
+            get {
+                object obj = ResourceManager.GetObject("tt ni bugs", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
