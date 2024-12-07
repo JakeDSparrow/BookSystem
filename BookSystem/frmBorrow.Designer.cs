@@ -187,6 +187,7 @@
             this.btnClose.Size = new System.Drawing.Size(26, 27);
             this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox2
             // 

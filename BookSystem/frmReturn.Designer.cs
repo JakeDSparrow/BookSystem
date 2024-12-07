@@ -42,7 +42,7 @@
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReturn.Location = new System.Drawing.Point(188, 292);
+            this.btnReturn.Location = new System.Drawing.Point(183, 305);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(96, 23);
             this.btnReturn.TabIndex = 14;
@@ -56,16 +56,17 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(40, 85);
+            this.label1.Location = new System.Drawing.Point(25, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 18);
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(146, 18);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Book Title:";
+            this.label1.Text = "Borrowed Books:";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 116);
+            this.dataGridView1.Location = new System.Drawing.Point(52, 139);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(383, 150);
             this.dataGridView1.TabIndex = 16;
@@ -74,12 +75,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BookSystem.Properties.Resources.Minimal_World_Book_Public_Library_Education_Logo_Template__2_3;
-            this.pictureBox1.Location = new System.Drawing.Point(-17, -30);
+            this.pictureBox1.Location = new System.Drawing.Point(-17, -19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(188, 152);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmReturn
             // 

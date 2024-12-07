@@ -12,19 +12,38 @@ namespace BookSystem
 {
     public partial class UserDashboard : Form
     {
-        public UserDashboard()
+
+        private string _username;
+        public UserDashboard(string username)
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            _username = username;
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmReturn returnbook = new frmReturn(_username);
+            this.Close();
+            returnbook.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            this.Close();
+            frmLogin.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmBorrow frmBorrow = new frmBorrow();
+            frmBorrow.Show();
         }
     }
 }

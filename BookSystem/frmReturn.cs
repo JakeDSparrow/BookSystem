@@ -28,5 +28,12 @@ namespace BookSystem
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            UserDashboard dashboard = new UserDashboard(_username);
+            this.Close();
+            dashboard.Show();
+        }
     }
 }

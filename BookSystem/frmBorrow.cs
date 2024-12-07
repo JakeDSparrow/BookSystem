@@ -12,6 +12,7 @@ namespace BookSystem
 {
     public partial class frmBorrow : Form
     {
+        private string _username;
         public frmBorrow()
         {
             InitializeComponent();
@@ -35,6 +36,13 @@ namespace BookSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            UserDashboard dashboard = new UserDashboard(_username);
+            this.Close();
+            dashboard.Show();
         }
     }
 }
