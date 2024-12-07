@@ -9,7 +9,8 @@ namespace BookSystem
 {
     public class SqlConnectionClass
     {
-        private string connection = "Data Source=DESKTOP-BMGGFVF;Initial Catalog=BookSystemDB;Integrated Security=True;Encrypt=False;";
+        //source
+        private string connection = "Data Source=WKS015;Initial Catalog=BookSystemDB;Integrated Security=True;Encrypt=False";
 
         public string GetConnectionString()
         {
