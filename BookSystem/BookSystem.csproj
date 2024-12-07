@@ -197,17 +197,38 @@
     <None Include="Resources\pp.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\3.PNG" />
+    <None Include="Resources\4.PNG" />
+    <None Include="Resources\5.PNG" />
+    <None Include="Resources\8-removebg-preview.png" />
     <Content Include="Resources\8664917_window_minimize_icon.ico" />
     <Content Include="Resources\Back.png" />
+    <None Include="Resources\Search1.png" />
     <None Include="Resources\ss.PNG" />
     <None Include="Resources\tt ni bugs.PNG" />
     <None Include="Resources\Green Simple Book Store Logo.png" />
     <None Include="Resources\kk.PNG" />
+    <None Include="Resources\jkfd.PNG" />
+    <None Include="Resources\ikjf.PNG" />
+    <None Include="Resources\gujs.PNG" />
+    <None Include="Resources\Green Simple Book Store Logo.gif" />
+    <None Include="Resources\Green Simple Book Store Logo1.gif" />
+    <None Include="Resources\Green Simple Book Store Logo %281%29.gif" />
+    <None Include="Resources\Green Simple Book Store Logo %282%29.gif" />
+    <None Include="Resources\jvfjf-removebg-preview.png" />
+    <None Include="Resources\bm-removebg-preview.png" />
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\Capture1.PNG" />
     <Content Include="Resources\Left Arrow.png" />
     <None Include="Resources\mg.PNG" />
     <None Include="Resources\ll.PNG" />
     <None Include="Resources\ll1.PNG" />
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%2941.gif" />
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %281%2942.gif" />
+    <None Include="Resources\output-onlinegiftools.gif" />
+    <None Include="Resources\Minimal World Book Public Library Education Logo Template %282%291.png" />
     <Content Include="Resources\refresh.png" />
+    <None Include="Resources\refresh1.png" />
     <Content Include="Resources\Search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
