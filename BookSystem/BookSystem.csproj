@@ -206,6 +206,7 @@
     <None Include="Resources\pp.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\vodka1.PNG" />
     <None Include="Resources\vodka.PNG" />
     <None Include="Resources\3.PNG" />
     <None Include="Resources\4.PNG" />
@@ -246,6 +247,23 @@
     <None Include="Resources\bg3.png" />
     <None Include="Resources\bg4.png" />
     <None Include="Resources\bg5.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %281%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %282%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %283%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %284%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %284%291.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %285%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %286%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %287%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %288%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %288%291.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %2811%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %2812%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %287%291.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %283%291.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %2813%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %2814%29.png" />
+    <None Include="Resources\Green Simple Book Store Logo %2876 x 89 px%29 %2815%29.png" />
     <Content Include="Resources\Left Arrow.png" />
     <None Include="Resources\mg.PNG" />
     <None Include="Resources\ll.PNG" />

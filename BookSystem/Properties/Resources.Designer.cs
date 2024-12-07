@@ -343,6 +343,176 @@ namespace BookSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___1_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___11_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___12_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___13_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___14_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (14)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___15_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (15)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___2_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___3_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___3_1 {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (3)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___4_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___4_1 {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (4)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___5_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___6_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___7_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___7_1 {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (7)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___8_ {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo__76_x_89_px___8_1 {
+            get {
+                object obj = ResourceManager.GetObject("Green Simple Book Store Logo (76 x 89 px) (8)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Green_Simple_Book_Store_Logo1 {
             get {
                 object obj = ResourceManager.GetObject("Green Simple Book Store Logo1", resourceCulture);
@@ -666,6 +836,16 @@ namespace BookSystem.Properties {
         internal static System.Drawing.Bitmap vodka {
             get {
                 object obj = ResourceManager.GetObject("vodka", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vodka1 {
+            get {
+                object obj = ResourceManager.GetObject("vodka1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
