@@ -113,14 +113,16 @@ namespace BookSystem
             frmAdmin.Show();
         }
 
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (result == DialogResult.Yes)
-            {
-                System.Environment.Exit(0);
-            }
+            frmAdmin admin = new frmAdmin();
+            this.Close();
+            admin.Show();
         }
     }
 

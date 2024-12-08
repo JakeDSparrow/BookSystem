@@ -198,5 +198,10 @@ namespace BookSystem
                 System.Environment.Exit(0);
             }
         }
+
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

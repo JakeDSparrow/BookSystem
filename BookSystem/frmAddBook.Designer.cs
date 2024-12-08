@@ -45,6 +45,7 @@
             this.txtBookID = new System.Windows.Forms.TextBox();
             this.cmbGenre = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Minimize = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -202,6 +203,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
+            this.panel2.Controls.Add(this.btn_Minimize);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.btnClose);
@@ -211,6 +213,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(685, 35);
             this.panel2.TabIndex = 18;
+            // 
+            // btn_Minimize
+            // 
+            this.btn_Minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Minimize.BackgroundImage")));
+            this.btn_Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Minimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Minimize.FlatAppearance.BorderSize = 0;
+            this.btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Minimize.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Minimize.Location = new System.Drawing.Point(625, 0);
+            this.btn_Minimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Minimize.Name = "btn_Minimize";
+            this.btn_Minimize.Size = new System.Drawing.Size(30, 35);
+            this.btn_Minimize.TabIndex = 17;
+            this.btn_Minimize.UseVisualStyleBackColor = true;
+            this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
             // 
             // pictureBox5
             // 
@@ -229,9 +247,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
             this.label8.Location = new System.Drawing.Point(45, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 18);
+            this.label8.Size = new System.Drawing.Size(86, 18);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Booklat";
+            this.label8.Text = "Add Book";
             // 
             // btnClose
             // 
@@ -308,5 +326,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btn_Minimize;
     }
 }
