@@ -23,7 +23,7 @@ namespace BookSystem
 
         //for login button...
 
-        private void Login() 
+        private void Login()
         {
             username = txtUsername.Text;
             password = txtPassword.Text;
@@ -31,7 +31,7 @@ namespace BookSystem
 
             if (IsValidUser(username, password))
             {
-                if (username == "admin01" || username == "ADMIN01")
+                if (username == "admin01" || username == "ADMIN01" || username == "admin")
                 {
                     frmAdmin frmadmin = new frmAdmin();
                     this.Hide();
