@@ -35,5 +35,12 @@ namespace BookSystem
             this.Close();
             dashboard.Show();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            UserDashboard dashboard = new UserDashboard(_username);
+            this.Close();
+            dashboard.Show();
+        }
     }
 }

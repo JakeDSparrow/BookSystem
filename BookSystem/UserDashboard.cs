@@ -56,5 +56,15 @@ namespace BookSystem
         {
             labelWelcome.Text = $"Welcome, {Username}!";
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                System.Environment.Exit(0);
+            }
+        }
     }
 }

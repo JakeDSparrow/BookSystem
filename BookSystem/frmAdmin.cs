@@ -38,11 +38,11 @@ namespace BookSystem
                 {
                     conn.Open();
 
-                    string query = "SELECT * FROM Books WHERE status = 'Available'";
+                    string query = "SELECT * FROM Books";
 
                     if (!string.IsNullOrEmpty(searchQuery))
                     {
-                        query += " WHERE CONCAT(booktitle, author, volume, quantity) LIKE @search";
+                        query += " WHERE CONCAT(bookid, booktitle, author, genre, volume, quantity, status) LIKE @search";
                     }
 
                     query += $" ORDER BY {orderByColumn} {sortDirection}";//added by chatgpt, unfunctional
@@ -150,15 +150,6 @@ namespace BookSystem
             }
         }
 
-        //label logout
-        /*private void lblLogout_Click(object sender, EventArgs e)
-        {
-            frmLogin frmLogin = new frmLogin();
-            MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            this.Close();
-            frmLogin.Show();
-        }*/
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string query = txtSearch.Text.Trim();
@@ -170,24 +161,9 @@ namespace BookSystem
             LoadBooks();
         }
 
-        private void lblRefresh_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblRemoveBook_Click(object sender, EventArgs e)
         {
             RemoveBook();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
         }
 
         // Search function modified
@@ -211,6 +187,16 @@ namespace BookSystem
         {
             this.Controls.Clear();
             this.InitializeComponent();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                System.Environment.Exit(0);
+            }
         }
     }
 }

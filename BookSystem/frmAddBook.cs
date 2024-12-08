@@ -113,13 +113,13 @@ namespace BookSystem
             frmAdmin.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to close?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                System.Environment.Exit(0);
             }
         }
     }
