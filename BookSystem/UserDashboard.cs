@@ -15,13 +15,33 @@ namespace BookSystem
 
         private string _username;
         private string Username;
-
+        private List<string> quotes;
+        private Random random;
         public UserDashboard(string username)
         {
             InitializeComponent();
             _username = username;
+
+            quotes = new List<string>
+            {
+                "\"A reader lives a thousand lives before he dies. The man who never reads lives only one.\" – George R.R. Martin",
+                "\"Reading is essential for those who seek to rise above the ordinary.\" – Jim Rohn",
+                "\"Books are a uniquely portable magic.\" – Stephen King",
+                "\"Once you learn to read, you will be forever free.\" – Frederick Douglass",
+                "\"A room without books is like a body without a soul.\" – Marcus Tullius Cicero",
+                "\"There is no friend as loyal as a book.\" – Ernest Hemingway",
+                "\"I have always imagined that paradise will be a kind of library.\" – Jorge Luis Borges",
+                "\"Reading gives us someplace to go when we have to stay where we are.\" – Mason Cooley",
+                "\"Today a reader, tomorrow a leader.\" – Margaret Fuller",
+                "\"Reading is dreaming with open eyes.\" – Unknown"
+            };
+            random = new Random();
+
+            timer1.Interval = 3000;
+            timer1.Tick += timer1_Tick;
+            timer1.Start();
         }
-        
+
         //Moving panel
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
@@ -95,6 +115,14 @@ namespace BookSystem
                     ReleaseCapture();
                     SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
                 }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (quotes != null && quotes.Count > 0)
+            {
+                lblQuote.Text = quotes[random.Next(quotes.Count)]; //display a random quote
             }
         }
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +45,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblQuote = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -247,12 +250,30 @@
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
             // 
+            // lblQuote
+            // 
+            this.lblQuote.AutoSize = true;
+            this.lblQuote.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuote.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
+            this.lblQuote.Location = new System.Drawing.Point(12, 370);
+            this.lblQuote.Name = "lblQuote";
+            this.lblQuote.Size = new System.Drawing.Size(363, 15);
+            this.lblQuote.TabIndex = 16;
+            this.lblQuote.Text = "\"Today a reader, tomorrow a leader.\" – Margaret Fuller";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // UserDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BookSystem.Properties.Resources.bg1;
             this.ClientSize = new System.Drawing.Size(685, 518);
+            this.Controls.Add(this.lblQuote);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
@@ -295,5 +316,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btn_Minimize;
+        private System.Windows.Forms.Label lblQuote;
+        private System.Windows.Forms.Timer timer1;
     }
 }
