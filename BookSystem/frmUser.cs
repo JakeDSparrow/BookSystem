@@ -27,7 +27,7 @@ namespace BookSystem
 
         private void lblBorrowbook_Click(object sender, EventArgs e)
         {
-            frmBorrow frmBorrow = new frmBorrow();
+            frmBorrow frmBorrow = new frmBorrow(_username);
             frmBorrow.ShowDialog();
         }
 
