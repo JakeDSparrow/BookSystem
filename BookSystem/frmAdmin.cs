@@ -38,7 +38,7 @@ namespace BookSystem
                 {
                     conn.Open();
 
-                    string query = "SELECT * FROM Books";
+                    string query = "SELECT * FROM Books WHERE status = 'Available'";
 
                     if (!string.IsNullOrEmpty(searchQuery))
                     {
@@ -200,6 +200,17 @@ namespace BookSystem
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadRefresh();
+        }
+        //refresh to be cont.
+        public void LoadRefresh()
+        {
+            this.Controls.Clear();
+            this.InitializeComponent();
         }
     }
 }

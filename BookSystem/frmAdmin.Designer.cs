@@ -36,7 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +73,7 @@
             this.lblRemoveBook.Name = "lblRemoveBook";
             this.lblRemoveBook.Size = new System.Drawing.Size(100, 24);
             this.lblRemoveBook.TabIndex = 3;
-            this.lblRemoveBook.Text = "Remove Book";
+            this.lblRemoveBook.Text = "Archive Book";
             this.lblRemoveBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblRemoveBook.Click += new System.EventHandler(this.lblRemoveBook_Click);
             // 
@@ -126,15 +126,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnRefresh
             // 
-            this.button2.BackgroundImage = global::BookSystem.Properties.Resources.refresh;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(621, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 26);
-            this.button2.TabIndex = 15;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRefresh.BackgroundImage = global::BookSystem.Properties.Resources.refresh;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Location = new System.Drawing.Point(631, 69);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(26, 26);
+            this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frmAdmin
             // 
@@ -143,7 +144,7 @@
             this.BackgroundImage = global::BookSystem.Properties.Resources.bg5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(685, 478);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtSearch);
@@ -173,6 +174,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

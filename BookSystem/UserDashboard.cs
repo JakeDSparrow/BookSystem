@@ -37,9 +37,13 @@ namespace BookSystem
         private void button1_Click_1(object sender, EventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
-            MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            this.Close();
-            frmLogin.Show();
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frmLogin.ShowDialog();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
