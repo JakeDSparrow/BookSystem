@@ -284,7 +284,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmHomepage";
+            this.Text = "Booklat - User";
             this.Load += new System.EventHandler(this.UserDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -119,9 +119,6 @@ namespace BookSystem
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddBook();
-            frmAdmin frmAdmin = new frmAdmin();
-            this.Close();
-            frmAdmin.Show();
         }
 
         private void btn_Minimize_Click(object sender, EventArgs e)

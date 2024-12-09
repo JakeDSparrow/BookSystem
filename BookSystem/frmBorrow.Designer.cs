@@ -208,9 +208,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
             this.label4.Location = new System.Drawing.Point(45, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 18);
+            this.label4.Size = new System.Drawing.Size(125, 18);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Borrow Book";
+            this.label4.Text = "Borrow a Book";
             // 
             // btnClose
             // 
@@ -251,7 +251,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBorrow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBorrow";
+            this.Text = "Borrow a Book";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);

@@ -197,8 +197,27 @@ namespace BookSystem
         //refresh to be cont.
         public void LoadRefresh()
         {
-            this.Controls.Clear();
-            this.InitializeComponent();
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-814NNKN;Initial Catalog=BookSystemDB;Integrated Security=True;Encrypt=False");
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Books WHERE status = 'Available'", connection);
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                // Open connection and fill the DataTable
+                connection.Open();
+                dataAdapter.Fill(dataTable);
+
+                // Set the DataGridView's data source to the DataTable
+                dgvBooks.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

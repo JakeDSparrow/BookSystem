@@ -203,7 +203,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAdmin";
+            this.Text = "Booklat - Admin";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.panel2.ResumeLayout(false);
