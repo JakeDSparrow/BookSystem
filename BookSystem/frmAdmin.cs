@@ -170,7 +170,7 @@ namespace BookSystem
 
         private void frmAdmin_Load(object sender, EventArgs e)
         {
-            LoadBooks();
+            LoadRefresh();
         }
 
         private void lblRemoveBook_Click(object sender, EventArgs e)
