@@ -169,6 +169,38 @@ namespace BookSystem
         private void frmAddBook_Load(object sender, EventArgs e)
         {
             txtQuantity.Text = "0";
+            txtBookID.Text = "000";
+        }
+
+        //Allow only digits and control keys (e.g., backspace)
+        private void txtBookID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; //Ignoring the key press
+            }
+        }
+
+        private void txtBookID_Leave(object sender, EventArgs e)
+        {
+
+            //Check if the field is empty
+            if (string.IsNullOrWhiteSpace(txtBookID.Text))
+            {
+                MessageBox.Show("Book ID cannot be empty.", "Booklat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtBookID.Focus();
+                txtBookID.Text = "000";
+                return;
+            }
+
+            //Parse the value and validate the range
+            int bookID = int.Parse(txtBookID.Text);
+            if (bookID < 0 || bookID > 999)
+            {
+                MessageBox.Show("Book ID must be between 000 and 999.", "Booklat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtBookID.Focus();
+                txtBookID.Text = "000"; //Reset to default value
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

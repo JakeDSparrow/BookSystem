@@ -194,6 +194,8 @@
             this.txtBookID.Name = "txtBookID";
             this.txtBookID.Size = new System.Drawing.Size(310, 23);
             this.txtBookID.TabIndex = 16;
+            this.txtBookID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookID_KeyPress);
+            this.txtBookID.Leave += new System.EventHandler(this.txtBookID_Leave);
             // 
             // cmbGenre
             // 
