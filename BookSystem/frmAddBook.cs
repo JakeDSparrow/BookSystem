@@ -24,7 +24,18 @@ namespace BookSystem
             conn = new SqlConnectionClass();
             cmd = new SqlCommand();
 
-            string[] genres = {"Fantasy","Horror","Science Fiction","Educational"};
+            string[] genres = {
+                "General Works, Computer Science & Information",
+                "Philosophy & Psychology",
+                "Religion",
+                "Social sciences",
+                "Language",
+                "Science",
+                "Technology",
+                "Arts & recreation",
+                "Literature",
+                "History & Geography"
+            };
 
             foreach (string genre in genres) 
             {
@@ -51,6 +62,33 @@ namespace BookSystem
             txtQuantity.Clear();
             cmbGenre.SelectedIndex = -1;
             txtVolume.Clear();
+        }
+
+        //method for getting the genre classification based on Dewey Decimal System
+        private string GetGenre(int bookID)
+        {
+            if (bookID >= 0 && bookID <= 99)
+                return "General Works, Computer Science & Information";
+            else if (bookID >= 100 && bookID <= 199)
+                return "Philosophy & Psychology";
+            else if (bookID >= 200 && bookID <= 299)
+                return "Religion";
+            else if (bookID >= 300 && bookID <= 399)
+                return "Social sciences";
+            else if (bookID >= 400 && bookID <= 499)
+                return "Language";
+            else if (bookID >= 500 && bookID <= 599)
+                return "Science";
+            else if (bookID >= 600 && bookID <= 699)
+                return "Technology";
+            else if (bookID >= 700 && bookID <= 799)
+                return "Arts & recreation";
+            else if (bookID >= 800 && bookID <= 899)
+                return "Literature";
+            else if (bookID >= 900 && bookID <= 999)
+                return "History & Geography";
+            else
+                return "Invalid Book ID";
         }
 
         private void AddBook()
@@ -170,6 +208,7 @@ namespace BookSystem
         {
             txtQuantity.Text = "0";
             txtBookID.Text = "000";
+            cmbGenre.Text = "General Works, Computer Science & Information";
         }
 
         //Allow only digits and control keys (e.g., backspace)
@@ -193,13 +232,17 @@ namespace BookSystem
                 return;
             }
 
-            //Parse the value and validate the range
-            int bookID = int.Parse(txtBookID.Text);
-            if (bookID < 0 || bookID > 999)
+            //Ensure the Book ID is numeric and within the valid range
+            if (int.TryParse(txtBookID.Text, out int bookID) && bookID >= 0 && bookID <= 999)
             {
-                MessageBox.Show("Book ID must be between 000 and 999.", "Booklat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtBookID.Focus();
-                txtBookID.Text = "000"; //Reset to default value
+                //Get the genre and set it in the Genre dropdown or label
+                string genre = GetGenre(bookID);
+                cmbGenre.Text = genre;
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid Book ID (000-999).", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtBookID.Text = "000";
             }
         }
 

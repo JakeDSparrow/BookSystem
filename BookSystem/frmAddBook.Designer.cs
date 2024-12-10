@@ -83,7 +83,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(103, 299);
+            this.label3.Location = new System.Drawing.Point(103, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 16);
             this.label3.TabIndex = 2;
@@ -114,7 +114,7 @@
             // txtBooktitle
             // 
             this.txtBooktitle.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBooktitle.Location = new System.Drawing.Point(229, 215);
+            this.txtBooktitle.Location = new System.Drawing.Point(229, 219);
             this.txtBooktitle.Name = "txtBooktitle";
             this.txtBooktitle.Size = new System.Drawing.Size(310, 23);
             this.txtBooktitle.TabIndex = 6;
@@ -122,7 +122,7 @@
             // txtAuthor
             // 
             this.txtAuthor.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAuthor.Location = new System.Drawing.Point(229, 258);
+            this.txtAuthor.Location = new System.Drawing.Point(229, 255);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(310, 23);
             this.txtAuthor.TabIndex = 7;
@@ -139,7 +139,7 @@
             // txtVolume
             // 
             this.txtVolume.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVolume.Location = new System.Drawing.Point(229, 296);
+            this.txtVolume.Location = new System.Drawing.Point(229, 292);
             this.txtVolume.Name = "txtVolume";
             this.txtVolume.Size = new System.Drawing.Size(310, 23);
             this.txtVolume.TabIndex = 9;
@@ -181,7 +181,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(132, 334);
+            this.label7.Location = new System.Drawing.Point(150, 331);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 16);
             this.label7.TabIndex = 14;
@@ -199,10 +199,12 @@
             // 
             // cmbGenre
             // 
+            this.cmbGenre.Enabled = false;
+            this.cmbGenre.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGenre.FormattingEnabled = true;
             this.cmbGenre.Location = new System.Drawing.Point(229, 328);
             this.cmbGenre.Name = "cmbGenre";
-            this.cmbGenre.Size = new System.Drawing.Size(121, 21);
+            this.cmbGenre.Size = new System.Drawing.Size(310, 22);
             this.cmbGenre.TabIndex = 17;
             // 
             // panel2
