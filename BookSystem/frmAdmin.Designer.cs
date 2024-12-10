@@ -98,11 +98,12 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.BackgroundImage = global::BookSystem.Properties.Resources.Search;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.Location = new System.Drawing.Point(219, 67);
+            this.button1.Location = new System.Drawing.Point(219, 69);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 26);
+            this.button1.Size = new System.Drawing.Size(26, 24);
             this.button1.TabIndex = 14;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -112,7 +113,9 @@
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
             this.btnRefresh.BackgroundImage = global::BookSystem.Properties.Resources.refresh;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRefresh.Location = new System.Drawing.Point(631, 69);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(26, 26);

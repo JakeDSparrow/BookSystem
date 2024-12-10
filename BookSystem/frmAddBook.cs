@@ -140,6 +140,37 @@ namespace BookSystem
             }
         }
 
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            int quantity = int.Parse(txtQuantity.Text);
+            if (quantity < 10)
+            {
+                txtQuantity.Text = (quantity + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Maximum quantity is 10", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            int quantity = int.Parse(txtQuantity.Text);
+            if (quantity > 0)
+            {
+                txtQuantity.Text = (quantity - 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Quantity cannot be less than 0", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void frmAddBook_Load(object sender, EventArgs e)
+        {
+            txtQuantity.Text = "0";
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             frmAdmin admin = new frmAdmin();
