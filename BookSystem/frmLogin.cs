@@ -40,7 +40,7 @@ namespace BookSystem
                 else
                 {
                     UserDashboard userDashboard = new UserDashboard(username); // Pass the username
-                    MessageBox.Show("Welcome, " + username, "Welcome", MessageBoxButtons.OK);
+                    MessageBox.Show("Welcome to Booklat, " + username+ "!", "Welcome", MessageBoxButtons.OK);
                     this.Hide();
                     userDashboard.ShowDialog();
                 }

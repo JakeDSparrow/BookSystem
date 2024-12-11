@@ -104,6 +104,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -176,11 +177,11 @@
             // 
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
-            this.labelWelcome.Font = new System.Drawing.Font("Garamond", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcome.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelWelcome.Location = new System.Drawing.Point(249, 46);
+            this.labelWelcome.Location = new System.Drawing.Point(222, 46);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(140, 33);
+            this.labelWelcome.Size = new System.Drawing.Size(116, 27);
             this.labelWelcome.TabIndex = 6;
             this.labelWelcome.Text = "Welcome, !";
             // 

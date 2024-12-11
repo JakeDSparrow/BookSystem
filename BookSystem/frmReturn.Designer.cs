@@ -73,11 +73,12 @@
             // 
             // dgvBorrowedBooks
             // 
+            this.dgvBorrowedBooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
             this.dgvBorrowedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBorrowedBooks.Location = new System.Drawing.Point(78, 160);
+            this.dgvBorrowedBooks.Location = new System.Drawing.Point(31, 152);
             this.dgvBorrowedBooks.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvBorrowedBooks.Name = "dgvBorrowedBooks";
-            this.dgvBorrowedBooks.Size = new System.Drawing.Size(575, 173);
+            this.dgvBorrowedBooks.Size = new System.Drawing.Size(653, 181);
             this.dgvBorrowedBooks.TabIndex = 16;
             this.dgvBorrowedBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -161,7 +162,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmReturn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Return Book";
+            this.Text = "Booklat: Return Book";
             this.Load += new System.EventHandler(this.frmReturn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -124,5 +124,11 @@ namespace BookSystem
                 lblQuote.Text = quotes[random.Next(quotes.Count)]; //display a random quote
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmHistory history = new frmHistory(_username);
+            history.Show();
+        }
     }
 }

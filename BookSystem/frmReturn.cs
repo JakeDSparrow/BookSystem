@@ -106,7 +106,7 @@ namespace BookSystem
 
                 if (rowsAffected == 0)
                 {
-                    MessageBox.Show("No borrowed books found for this user.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("You have no borrowed book/s.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 dgvBorrowedBooks.DataSource = dataTable;
