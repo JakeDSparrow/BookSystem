@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReturn));
             this.btnReturn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBorrowedBooks = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowedBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -71,15 +71,15 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Borrowed Books:";
             // 
-            // dataGridView1
+            // dgvBorrowedBooks
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(78, 160);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(575, 173);
-            this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvBorrowedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBorrowedBooks.Location = new System.Drawing.Point(78, 160);
+            this.dgvBorrowedBooks.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvBorrowedBooks.Name = "dgvBorrowedBooks";
+            this.dgvBorrowedBooks.Size = new System.Drawing.Size(575, 173);
+            this.dgvBorrowedBooks.TabIndex = 16;
+            this.dgvBorrowedBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -151,7 +151,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(711, 392);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvBorrowedBooks);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -162,7 +162,8 @@
             this.Name = "frmReturn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Return Book";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmReturn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -175,7 +176,7 @@
         #endregion
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBorrowedBooks;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox5;

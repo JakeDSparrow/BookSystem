@@ -80,7 +80,6 @@ namespace BookSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             frmBorrow frmBorrow = new frmBorrow(_username);
-            this.Hide();
             frmBorrow.Show();
         }
 
@@ -95,7 +94,7 @@ namespace BookSystem
 
             if (result == DialogResult.Yes)
             {
-                System.Environment.Exit(0);
+                Application.Exit();
             }
         }
 
