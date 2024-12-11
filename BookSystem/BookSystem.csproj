@@ -49,6 +49,12 @@
     <Compile Include="CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="frmArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchive.Designer.cs">
+      <DependentUpon>frmArchive.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +103,6 @@
     <Compile Include="frmReturn.Designer.cs">
       <DependentUpon>frmReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUser.Designer.cs">
-      <DependentUpon>frmUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="libraryminiDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +117,9 @@
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlConnectionClass.cs" />
+    <EmbeddedResource Include="frmArchive.resx">
+      <DependentUpon>frmArchive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHistory.resx">
       <DependentUpon>frmHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReturn.resx">
       <DependentUpon>frmReturn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUser.resx">
-      <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

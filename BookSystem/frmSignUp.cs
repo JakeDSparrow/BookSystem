@@ -65,7 +65,7 @@ namespace BookSystem
                             MessageBox.Show("Signup successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Hide();
                             frmLogin frmLogin = new frmLogin();
-                            frmLogin.ShowDialog();
+                            frmLogin.Show();
                         }
                         else
                         {
@@ -79,7 +79,6 @@ namespace BookSystem
                 }
             }
         }
-
 
         private void btnSignup_Click(object sender, EventArgs e)
         {

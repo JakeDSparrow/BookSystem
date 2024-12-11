@@ -136,7 +136,7 @@ namespace BookSystem
         {
             ReturnBook();
         }
-
+        //remove kuys
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

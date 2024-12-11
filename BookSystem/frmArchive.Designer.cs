@@ -1,6 +1,6 @@
 ﻿namespace BookSystem
 {
-    partial class frmHistory
+    partial class frmArchive
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHistory));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArchive));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Minimize = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.dgvHistory = new System.Windows.Forms.DataGridView();
+            this.dgvArchives = new System.Windows.Forms.DataGridView();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArchives)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
+            this.panel2.Controls.Add(this.btn_Minimize);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnClose);
@@ -49,8 +53,23 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(683, 35);
-            this.panel2.TabIndex = 19;
+            this.panel2.Size = new System.Drawing.Size(604, 35);
+            this.panel2.TabIndex = 17;
+            // 
+            // btn_Minimize
+            // 
+            this.btn_Minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Minimize.BackgroundImage")));
+            this.btn_Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Minimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Minimize.FlatAppearance.BorderSize = 0;
+            this.btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Minimize.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Minimize.Location = new System.Drawing.Point(544, 0);
+            this.btn_Minimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Minimize.Name = "btn_Minimize";
+            this.btn_Minimize.Size = new System.Drawing.Size(30, 35);
+            this.btn_Minimize.TabIndex = 17;
+            this.btn_Minimize.UseVisualStyleBackColor = true;
             // 
             // pictureBox5
             // 
@@ -69,9 +88,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
             this.label4.Location = new System.Drawing.Point(45, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 18);
+            this.label4.Size = new System.Drawing.Size(154, 18);
             this.label4.TabIndex = 1;
-            this.label4.Text = "History";
+            this.label4.Text = "Booklat - Archives";
             // 
             // btnClose
             // 
@@ -80,7 +99,7 @@
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(653, 0);
+            this.btnClose.Location = new System.Drawing.Point(574, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 35);
@@ -88,33 +107,61 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // dgvHistory
+            // dgvArchives
             // 
-            this.dgvHistory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
-            this.dgvHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistory.Location = new System.Drawing.Point(13, 70);
-            this.dgvHistory.Name = "dgvHistory";
-            this.dgvHistory.Size = new System.Drawing.Size(658, 302);
-            this.dgvHistory.TabIndex = 20;
+            this.dgvArchives.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
+            this.dgvArchives.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvArchives.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArchives.Location = new System.Drawing.Point(12, 51);
+            this.dgvArchives.Name = "dgvArchives";
+            this.dgvArchives.Size = new System.Drawing.Size(547, 215);
+            this.dgvArchives.TabIndex = 18;
             // 
-            // frmHistory
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(462, 272);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(129, 23);
+            this.btnClear.TabIndex = 19;
+            this.btnClear.Text = "CLEAR ARCHIVE";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundImage = global::BookSystem.Properties.Resources.refresh;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRefresh.Location = new System.Drawing.Point(565, 51);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(26, 26);
+            this.btnRefresh.TabIndex = 20;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // frmArchive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(683, 384);
-            this.Controls.Add(this.dgvHistory);
+            this.BackgroundImage = global::BookSystem.Properties.Resources.White_and_Light_Blue_Illustrative_Creative_Literature_Project_Presentation;
+            this.ClientSize = new System.Drawing.Size(604, 307);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.dgvArchives);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmHistory";
+            this.Name = "frmArchive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Booklat: History";
-            this.Load += new System.EventHandler(this.frmHistory_Load);
+            this.Text = "Booklat -Archives";
+            this.Load += new System.EventHandler(this.frmArchive_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArchives)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,9 +169,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_Minimize;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DataGridView dgvHistory;
+        private System.Windows.Forms.DataGridView dgvArchives;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

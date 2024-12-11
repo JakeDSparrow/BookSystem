@@ -95,8 +95,6 @@ namespace BookSystem
             }
         }
 
-
-
         private void frmHistory_Load(object sender, EventArgs e)
         {
             History(_username);

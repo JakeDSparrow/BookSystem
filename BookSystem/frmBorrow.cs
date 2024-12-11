@@ -153,11 +153,13 @@ namespace BookSystem
             BorrowBook(_username);
         }
 
+        //nadouble click ni chloe tong mga to
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
+        //paremove kuys
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

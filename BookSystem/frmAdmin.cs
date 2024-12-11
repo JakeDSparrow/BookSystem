@@ -33,12 +33,11 @@ namespace BookSystem
 
         private static extern bool ReleaseCapture();
 
-
         private void lblAddbook_Click(object sender, EventArgs e)
         {
             frmAddBook frmAddBook = new frmAddBook();
             this.Hide();
-            frmAddBook.ShowDialog();
+            frmAddBook.Show();
         }
 
         //search button modified
@@ -98,8 +97,8 @@ namespace BookSystem
                 {
                    
                     string archiveQuery = @"
-                        INSERT INTO archive (bookid, booktitle, genre, volume, quantity, username, borrow_date, return_date) 
-                        VALUES (@bookid, @booktitle, @genre, @volume, @quantity, @username, @borrow_date, @return_date)";
+                        INSERT INTO archives (bookid, booktitle, author, genre, volume) 
+                        VALUES (@bookid, @booktitle, @author, @genre, @volume)";
                     
                     string updateQuery = "UPDATE books SET status = @status WHERE bookid = @bookid";
                     
@@ -115,13 +114,9 @@ namespace BookSystem
                                 {
                                     archiveCmd.Parameters.AddWithValue("@bookid", bookId);
                                     archiveCmd.Parameters.AddWithValue("@booktitle", bookTitle);
+                                    archiveCmd.Parameters.AddWithValue("@author", author);
                                     archiveCmd.Parameters.AddWithValue("@genre", genre);
                                     archiveCmd.Parameters.AddWithValue("@volume", volume);
-                                    archiveCmd.Parameters.AddWithValue("@quantity", quantity);
-                                    //added by chatgpt, kapag may nanghiram na with set the user name and the dates
-                                    archiveCmd.Parameters.AddWithValue("@username", DBNull.Value); // Set NULL for now
-                                    archiveCmd.Parameters.AddWithValue("@borrow_date", DBNull.Value); // Set NULL for now
-                                    archiveCmd.Parameters.AddWithValue("@return_date", DBNull.Value); // Set NULL for now
 
                                     archiveCmd.ExecuteNonQuery();
                                 }
@@ -228,7 +223,7 @@ namespace BookSystem
             {
                 frmLogin frmLogin = new frmLogin();
                 this.Close();
-                frmLogin.ShowDialog();
+                frmLogin.Show();
             }
         }
 
@@ -248,6 +243,13 @@ namespace BookSystem
                     SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            frmArchive archive = new frmArchive();
+            this.Hide();
+            archive.Show();
         }
     }
 }

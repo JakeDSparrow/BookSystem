@@ -43,10 +43,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.libraryminiDataSet1 = new BookSystem.libraryminiDataSet();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryminiDataSet1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvBooks
@@ -77,9 +80,10 @@
             this.lblAddbook.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblAddbook.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblAddbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddbook.Location = new System.Drawing.Point(472, 368);
+            this.lblAddbook.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAddbook.Location = new System.Drawing.Point(0, 0);
             this.lblAddbook.Name = "lblAddbook";
-            this.lblAddbook.Size = new System.Drawing.Size(78, 24);
+            this.lblAddbook.Size = new System.Drawing.Size(165, 61);
             this.lblAddbook.TabIndex = 2;
             this.lblAddbook.Text = "Add Book";
             this.lblAddbook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,9 +94,10 @@
             this.lblRemoveBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblRemoveBook.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblRemoveBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveBook.Location = new System.Drawing.Point(556, 368);
+            this.lblRemoveBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRemoveBook.Location = new System.Drawing.Point(171, 0);
             this.lblRemoveBook.Name = "lblRemoveBook";
-            this.lblRemoveBook.Size = new System.Drawing.Size(100, 24);
+            this.lblRemoveBook.Size = new System.Drawing.Size(176, 61);
             this.lblRemoveBook.TabIndex = 3;
             this.lblRemoveBook.Text = "Archive Book";
             this.lblRemoveBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,6 +215,31 @@
             this.libraryminiDataSet1.DataSetName = "libraryminiDataSet";
             this.libraryminiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(353, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 61);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Archives";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblRemoveBook);
+            this.panel1.Controls.Add(this.lblAddbook);
+            this.panel1.Location = new System.Drawing.Point(0, 417);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(510, 61);
+            this.panel1.TabIndex = 18;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,9 +251,8 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.lblRemoveBook);
-            this.Controls.Add(this.lblAddbook);
             this.Controls.Add(this.dgvBooks);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -236,6 +265,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryminiDataSet1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +285,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btn_Minimize;
         private libraryminiDataSet libraryminiDataSet1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -69,27 +69,27 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(314, 284);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(252, 26);
+            this.txtUsername.Size = new System.Drawing.Size(252, 23);
             this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(314, 350);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(252, 26);
+            this.txtPassword.Size = new System.Drawing.Size(252, 23);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(372, 418);
+            this.btnLogin.Location = new System.Drawing.Point(392, 400);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(88, 24);
@@ -101,12 +101,12 @@
             // lblSignup
             // 
             this.lblSignup.AutoSize = true;
-            this.lblSignup.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignup.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSignup.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lblSignup.Location = new System.Drawing.Point(352, 461);
+            this.lblSignup.Location = new System.Drawing.Point(361, 456);
             this.lblSignup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSignup.Name = "lblSignup";
-            this.lblSignup.Size = new System.Drawing.Size(166, 17);
+            this.lblSignup.Size = new System.Drawing.Size(144, 16);
             this.lblSignup.TabIndex = 5;
             this.lblSignup.Text = "No Account? Sign Up";
             this.lblSignup.Click += new System.EventHandler(this.lblSignup_Click);
@@ -118,7 +118,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(818, 35);
+            this.panel1.Size = new System.Drawing.Size(847, 35);
             this.panel1.TabIndex = 13;
             // 
             // btnClose
@@ -128,7 +128,7 @@
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(788, 0);
+            this.btnClose.Location = new System.Drawing.Point(817, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 35);
@@ -163,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(818, 556);
+            this.ClientSize = new System.Drawing.Size(847, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblSignup);
