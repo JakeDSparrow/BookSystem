@@ -31,33 +31,31 @@ namespace BookSystem
         [System.Runtime.InteropServices.DllImport("user32.dll")]
 
         private static extern bool ReleaseCapture();
-
+        //Method for Returning a book
         private void ReturnBook()
         {
-            // Check if a book is selected in the DataGridView
+            // Checks if a book is selected in the DataGridView
             if (dgvBorrowedBooks.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a book to return.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Retrieve the selected book details from the DataGridView
+            // Retrieves the selected book details from the DataGridView
             DataGridViewRow selectedRow = dgvBorrowedBooks.SelectedRows[0];
-            string bookID = selectedRow.Cells["bookid"].Value.ToString(); // Assuming 'bookid' is a column in the DataGridView
-            string bookTitle = selectedRow.Cells["booktitle"].Value.ToString(); // Assuming 'booktitle' is a column in the DataGridView
-            string genre = selectedRow.Cells["genre"].Value.ToString(); // Assuming 'genre' is a column in the DataGridView
-            string username = selectedRow.Cells["username"].Value.ToString(); // Assuming 'username' is a column in the DataGridView
+            string bookID = selectedRow.Cells["bookid"].Value.ToString(); 
+            string bookTitle = selectedRow.Cells["booktitle"].Value.ToString(); 
+            string genre = selectedRow.Cells["genre"].Value.ToString(); 
+            string username = selectedRow.Cells["username"].Value.ToString(); 
 
             try
             {
                 using (SqlConnection conn = classcon.GetConnection())
                 {
                     conn.Open();
-
-                    // SQL query to update the status of the book copy to 'Available'
+                    
                     string updateBookStatusQuery = "UPDATE books SET status = 'Available' WHERE bookid = @bookid";
-
-                    // SQL query to remove the record from the borrowed books table (optional: keep the record or just update)
+                    
                     string deleteBorrowedBookQuery = "DELETE FROM borrowedbooks WHERE bookid = @bookid AND username = @username";
 
                     // Update the book status to 'Available'
@@ -67,7 +65,7 @@ namespace BookSystem
                         updateStatusCmd.ExecuteNonQuery();
                     }
 
-                    // Remove the borrowed book record (optional, depending on whether you want to keep a history or just mark as returned)
+                    // Remove the borrowed book record 
                     using (SqlCommand deleteBorrowedCmd = new SqlCommand(deleteBorrowedBookQuery, conn))
                     {
                         deleteBorrowedCmd.Parameters.AddWithValue("@bookid", bookID);
@@ -77,8 +75,8 @@ namespace BookSystem
 
                     MessageBox.Show("Book returned successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Optionally, refresh the DataGridView to reflect the change (if necessary)
-                    LoadBorrowedBooks(username); // Assuming you have a method to reload the DataGridView with borrowed books.
+                    // Reloads the form using this method
+                    LoadBorrowedBooks(username);
                 }
             }
             catch (Exception ex)
@@ -86,7 +84,7 @@ namespace BookSystem
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Loads the Books borrowed by the current user
         private void LoadBorrowedBooks(string username)
         {
             SqlConnection connection = classcon.GetConnection();
@@ -95,27 +93,22 @@ namespace BookSystem
 
             try
             {
-                // Debugging: Check if username is correct
                 if (string.IsNullOrWhiteSpace(username))
                 {
                     MessageBox.Show("Username is null or empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // Add parameter for username
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@username", username);
 
-                // Open connection and fill the DataTable
                 connection.Open();
                 int rowsAffected = dataAdapter.Fill(dataTable);
 
-                // Check if any rows were retrieved
                 if (rowsAffected == 0)
                 {
                     MessageBox.Show("No borrowed books found for this user.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                // Set the DataGridView's data source to the DataTable
                 dgvBorrowedBooks.DataSource = dataTable;
             }
             catch (Exception ex)
@@ -132,8 +125,6 @@ namespace BookSystem
         {
             ReturnBook();
         }
-
-
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
