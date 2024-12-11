@@ -53,33 +53,36 @@ namespace BookSystem
 
         private void History(string username)
         {
+            // Validate username
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                MessageBox.Show("Invalid username!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // SQL query to fetch the borrowing history from the user_history table
+            string query = "SELECT bookid, booktitle, genre, borrow_date, return_date, status FROM user_history WHERE username = @username ORDER BY borrow_date DESC";
+
             SqlConnection connection = classcon.GetConnection();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM archive WHERE username = @username", connection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
             DataTable dataTable = new DataTable();
 
             try
             {
-                // Check if the username is valid
-                if (string.IsNullOrWhiteSpace(username))
-                {
-                    MessageBox.Show("Username is null or empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Add username as parameter to the query
+                // Add parameter for username
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@username", username);
 
                 // Open connection and fill the DataTable
                 connection.Open();
                 int rowsAffected = dataAdapter.Fill(dataTable);
 
-                // Check if there are any records found
+                // Check if any rows were retrieved
                 if (rowsAffected == 0)
                 {
-                    MessageBox.Show("You have no borrowing history.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No borrowing history found for this user.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                // Bind the data to the DataGridView
+                // Set the DataGridView's data source to the DataTable
                 dgvHistory.DataSource = dataTable;
             }
             catch (Exception ex)
@@ -93,9 +96,10 @@ namespace BookSystem
         }
 
 
+
         private void frmHistory_Load(object sender, EventArgs e)
         {
-
+            History(_username);
         }
     }
 }

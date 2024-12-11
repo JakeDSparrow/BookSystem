@@ -75,6 +75,17 @@ namespace BookSystem
 
                     MessageBox.Show("Book returned successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    
+                    string updateHistoryQuery = "UPDATE user_history SET return_date = @return_date, status = 'Returned' WHERE bookid = @bookid AND username = @username AND return_date IS NULL";
+
+                    using (SqlCommand updateHistoryCmd = new SqlCommand(updateHistoryQuery, conn))
+                    {
+                        updateHistoryCmd.Parameters.AddWithValue("@bookid", bookID);
+                        updateHistoryCmd.Parameters.AddWithValue("@username", username);
+                        updateHistoryCmd.Parameters.AddWithValue("@return_date", DateTime.Now);
+                        updateHistoryCmd.ExecuteNonQuery();
+                    }
+
                     // Reloads the form using this method
                     LoadBorrowedBooks(username);
                 }

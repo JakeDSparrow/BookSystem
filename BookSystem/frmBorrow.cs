@@ -123,6 +123,18 @@ namespace BookSystem
                         }
 
                         MessageBox.Show("Book borrowed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        string inserthistoryquery = @"INSERT INTO user_history (username, bookid, booktitle, borrow_date, genre, status) VALUES (@username, @bookid, @booktitle, @borrow_date, @genre, 'Pending');";
+
+                        using (SqlCommand insertHistoryCmd = new SqlCommand(inserthistoryquery, conn))
+                        {
+                            insertHistoryCmd.Parameters.AddWithValue("@username", username);
+                            insertHistoryCmd.Parameters.AddWithValue("@bookid", bookID);
+                            insertHistoryCmd.Parameters.AddWithValue("@booktitle", booktitle);
+                            insertHistoryCmd.Parameters.AddWithValue("@borrow_date", borrowDate);
+                            insertHistoryCmd.Parameters.AddWithValue("@genre", genre);
+                            insertHistoryCmd.ExecuteNonQuery();
+                        }
                     }
                     else
                     {
