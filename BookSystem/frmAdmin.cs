@@ -197,7 +197,7 @@ namespace BookSystem
         //refresh to be cont.
         public void LoadRefresh()
         {
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-814NNKN;Initial Catalog=BookSystemDB;Integrated Security=True;Encrypt=False");
+            SqlConnection connection = classcon.GetConnection();
             SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Books WHERE status = 'Available'", connection);
             DataTable dataTable = new DataTable();
 
@@ -226,7 +226,9 @@ namespace BookSystem
 
             if (result == DialogResult.Yes)
             {
-                System.Environment.Exit(0);
+                frmLogin frmLogin = new frmLogin();
+                this.Close();
+                frmLogin.ShowDialog();
             }
         }
 
