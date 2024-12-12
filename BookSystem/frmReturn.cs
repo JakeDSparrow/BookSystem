@@ -43,6 +43,18 @@ namespace BookSystem
 
             // Retrieves the selected book details from the DataGridView
             DataGridViewRow selectedRow = dgvBorrowedBooks.SelectedRows[0];
+
+            //Validate if the row contains valid data
+            if (selectedRow.Cells["bookid"].Value == null ||
+                selectedRow.Cells["booktitle"].Value == null ||
+                selectedRow.Cells["genre"].Value == null ||
+                selectedRow.Cells["volume"].Value == null ||
+                selectedRow.Cells["quantity"].Value == null ||
+                selectedRow.Cells["borrow_date"].Value == null)
+            {
+                MessageBox.Show("The selected row contains invalid data. Please select a valid book.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string bookID = selectedRow.Cells["bookid"].Value.ToString(); 
             string bookTitle = selectedRow.Cells["booktitle"].Value.ToString(); 
             string genre = selectedRow.Cells["genre"].Value.ToString(); 

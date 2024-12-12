@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -261,7 +262,7 @@ namespace BookSystem
             string query = txtBb.Text.Trim();
             LoadBooks(query);
         }
-
+        
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

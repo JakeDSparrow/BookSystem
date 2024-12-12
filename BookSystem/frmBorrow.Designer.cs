@@ -57,7 +57,6 @@
             this.txtBb.Name = "txtBb";
             this.txtBb.Size = new System.Drawing.Size(240, 25);
             this.txtBb.TabIndex = 15;
-            this.txtBb.Text = "Search for a Book";
             this.txtBb.TextChanged += new System.EventHandler(this.txtBooktitle_TextChanged);
             // 
             // btnBorrow
@@ -163,9 +162,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
             this.label4.Location = new System.Drawing.Point(45, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 18);
+            this.label4.Size = new System.Drawing.Size(125, 18);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Booklat - Admin";
+            this.label4.Text = "Borrow a Book";
             // 
             // btnClose
             // 
