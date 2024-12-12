@@ -137,7 +137,7 @@ namespace BookSystem
 
                     for (int i = 1; i <= quantity; i++) // Loops to handle each "unit" of the book
                     {
-                        string uniqueBookID = $"{baseBookID}-{i}"; // Generate unique bookid
+                        string uniqueBookID = (quantity == 1) ? baseBookID : $"{baseBookID}-{i}"; // Generate unique bookid only if quantity > 1
 
                         // Check if bookid exists
                         using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
@@ -194,6 +194,7 @@ namespace BookSystem
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         //Exception for zero quantity
         public class NoZeroException : Exception
