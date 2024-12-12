@@ -29,45 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBorrow));
-            this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.txtBooktitle = new System.Windows.Forms.TextBox();
+            this.txtBb = new System.Windows.Forms.TextBox();
             this.btnBorrow = new System.Windows.Forms.Button();
-            this.cmbVolume = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpBorrow = new System.Windows.Forms.DateTimePicker();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dtpBorrow = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Minimize = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.dgvBorrowBooks = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowBooks)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtAuthor
+            // txtBb
             // 
-            this.txtAuthor.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAuthor.ForeColor = System.Drawing.Color.Gray;
-            this.txtAuthor.Location = new System.Drawing.Point(177, 244);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(233, 30);
-            this.txtAuthor.TabIndex = 16;
-            this.txtAuthor.Text = "Book Author";
-            // 
-            // txtBooktitle
-            // 
-            this.txtBooktitle.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBooktitle.ForeColor = System.Drawing.Color.Gray;
-            this.txtBooktitle.Location = new System.Drawing.Point(174, 72);
-            this.txtBooktitle.Name = "txtBooktitle";
-            this.txtBooktitle.Size = new System.Drawing.Size(236, 30);
-            this.txtBooktitle.TabIndex = 15;
-            this.txtBooktitle.Text = "Book Title";
+            this.txtBb.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBb.ForeColor = System.Drawing.Color.Gray;
+            this.txtBb.Location = new System.Drawing.Point(68, 56);
+            this.txtBb.Name = "txtBb";
+            this.txtBb.Size = new System.Drawing.Size(240, 25);
+            this.txtBb.TabIndex = 15;
+            this.txtBb.Text = "Search for a Book";
+            this.txtBb.TextChanged += new System.EventHandler(this.txtBooktitle_TextChanged);
             // 
             // btnBorrow
             // 
@@ -83,69 +74,18 @@
             this.btnBorrow.UseVisualStyleBackColor = true;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
-            // cmbVolume
-            // 
-            this.cmbVolume.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbVolume.ForeColor = System.Drawing.Color.Gray;
-            this.cmbVolume.FormattingEnabled = true;
-            this.cmbVolume.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20"});
-            this.cmbVolume.Location = new System.Drawing.Point(174, 157);
-            this.cmbVolume.Name = "cmbVolume";
-            this.cmbVolume.Size = new System.Drawing.Size(236, 30);
-            this.cmbVolume.TabIndex = 19;
-            this.cmbVolume.Text = "Book Volume";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::BookSystem.Properties.Resources.Green_Simple_Book_Store_Logo__76_x_89_px___7_1;
-            this.pictureBox1.Location = new System.Drawing.Point(90, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label3
-            // 
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Image = global::BookSystem.Properties.Resources.Green_Simple_Book_Store_Logo__76_x_89_px___6_;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(104, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 77);
-            this.label3.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Image = global::BookSystem.Properties.Resources.Green_Simple_Book_Store_Logo__76_x_89_px___12_;
-            this.label1.Location = new System.Drawing.Point(98, 233);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 50);
-            this.label1.TabIndex = 10;
             // 
             // label2
             // 
@@ -157,29 +97,30 @@
             this.label2.TabIndex = 22;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BookSystem.Properties.Resources.Green_Simple_Book_Store_Logo__76_x_89_px___15_;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 320);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(98, 69);
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
             // dtpBorrow
             // 
             this.dtpBorrow.CalendarForeColor = System.Drawing.Color.Gray;
             this.dtpBorrow.CalendarTitleForeColor = System.Drawing.Color.Gray;
             this.dtpBorrow.CalendarTrailingForeColor = System.Drawing.Color.Gray;
-            this.dtpBorrow.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBorrow.Location = new System.Drawing.Point(174, 317);
+            this.dtpBorrow.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBorrow.Location = new System.Drawing.Point(68, 351);
             this.dtpBorrow.Name = "dtpBorrow";
-            this.dtpBorrow.Size = new System.Drawing.Size(264, 25);
+            this.dtpBorrow.Size = new System.Drawing.Size(253, 22);
             this.dtpBorrow.TabIndex = 26;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BookSystem.Properties.Resources.Green_Simple_Book_Store_Logo__76_x_89_px___15_;
-            this.pictureBox2.Location = new System.Drawing.Point(101, 286);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 73);
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
+            this.panel2.Controls.Add(this.btn_Minimize);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnClose);
@@ -189,7 +130,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(547, 35);
             this.panel2.TabIndex = 29;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // btn_Minimize
+            // 
+            this.btn_Minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Minimize.BackgroundImage")));
+            this.btn_Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Minimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Minimize.FlatAppearance.BorderSize = 0;
+            this.btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Minimize.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Minimize.Location = new System.Drawing.Point(487, 0);
+            this.btn_Minimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Minimize.Name = "btn_Minimize";
+            this.btn_Minimize.Size = new System.Drawing.Size(30, 35);
+            this.btn_Minimize.TabIndex = 17;
+            this.btn_Minimize.UseVisualStyleBackColor = true;
             // 
             // pictureBox5
             // 
@@ -208,9 +163,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
             this.label4.Location = new System.Drawing.Point(45, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 18);
+            this.label4.Size = new System.Drawing.Size(138, 18);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Borrow a Book";
+            this.label4.Text = "Booklat - Admin";
             // 
             // btnClose
             // 
@@ -225,7 +180,32 @@
             this.btnClose.Size = new System.Drawing.Size(30, 35);
             this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            // 
+            // dgvBorrowBooks
+            // 
+            this.dgvBorrowBooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
+            this.dgvBorrowBooks.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBorrowBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBorrowBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
+            this.dgvBorrowBooks.Location = new System.Drawing.Point(68, 87);
+            this.dgvBorrowBooks.Name = "dgvBorrowBooks";
+            this.dgvBorrowBooks.Size = new System.Drawing.Size(440, 258);
+            this.dgvBorrowBooks.TabIndex = 30;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackgroundImage = global::BookSystem.Properties.Resources.Search;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button1.Location = new System.Drawing.Point(282, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(26, 24);
+            this.button1.TabIndex = 31;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmBorrow
             // 
@@ -235,15 +215,13 @@
             this.BackgroundImage = global::BookSystem.Properties.Resources.bg2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(547, 439);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgvBorrowBooks);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dtpBorrow);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbVolume);
-            this.Controls.Add(this.txtAuthor);
-            this.Controls.Add(this.txtBooktitle);
+            this.Controls.Add(this.txtBb);
             this.Controls.Add(this.btnBorrow);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
@@ -252,30 +230,31 @@
             this.Name = "frmBorrow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Booklat: Borrow a Book";
+            this.Load += new System.EventHandler(this.frmBorrow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtAuthor;
-        private System.Windows.Forms.TextBox txtBooktitle;
+        private System.Windows.Forms.TextBox txtBb;
         private System.Windows.Forms.Button btnBorrow;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbVolume;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpBorrow;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DateTimePicker dtpBorrow;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_Minimize;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridView dgvBorrowBooks;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -38,28 +38,63 @@ namespace BookSystem
 
         private static extern bool ReleaseCapture();
 
+        private void LoadBooks(string searchQuery = "", string orderByColumn = "bookid", string sortDirection = "ASC")
+        {
+            try
+            {
+                using (SqlConnection conn = classcon.GetConnection())
+                {
+                    conn.Open();
+
+                    string query = "SELECT * FROM Books";
+
+                    if (!string.IsNullOrEmpty(searchQuery))
+                    {
+                        query += " WHERE CONCAT(bookid, booktitle, author, genre, volume, quantity, status) LIKE @search";
+                    }
+
+                    query += $" ORDER BY {orderByColumn} {sortDirection}";//added by chatgpt, unfunctional
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+
+                        if (!string.IsNullOrEmpty(searchQuery))
+                        {
+                            cmd.Parameters.AddWithValue("@search", "%" + searchQuery + "%");
+                        }
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        dgvBorrowBooks.DataSource = dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading data: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void BorrowBook(string username)
         {
-            // Retrieve inputs
-            string booktitle = txtBooktitle.Text;
-            string author = txtAuthor.Text;
-            string volume = cmbVolume.Text; // Retrieve the selected volume as text
-            DateTime borrowDate = dtpBorrow.Value;
-
-            // Validate inputs
-            if (string.IsNullOrWhiteSpace(booktitle) ||
-                string.IsNullOrWhiteSpace(author) ||
-                string.IsNullOrWhiteSpace(volume))
+            // Check if a book is selected in the DataGridView
+            if (dgvBorrowBooks.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a book to borrow.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!int.TryParse(volume, out int volumeNumber) || volumeNumber <= 0 || volumeNumber > 20)
-            {
-                MessageBox.Show("Selected volume is not valid. Please choose a value between 1 and 20.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            // Retrieve the selected book details from the DataGridView
+            DataGridViewRow selectedRow = dgvBorrowBooks.SelectedRows[0];
+            string bookID = selectedRow.Cells["bookid"].Value.ToString();
+            string bookTitle = selectedRow.Cells["booktitle"].Value.ToString();
+            string author = selectedRow.Cells["author"].Value.ToString();
+            string genre = selectedRow.Cells["genre"].Value.ToString();
+            string volume = selectedRow.Cells["volume"].Value.ToString();
+
+            DateTime borrowDate = dtpBorrow.Value; // Get the borrowing date from the DateTimePicker
 
             try
             {
@@ -67,84 +102,104 @@ namespace BookSystem
                 {
                     conn.Open();
 
-                    string bookID = null;
-                    string genre = null;
-                    string status = null;
-
-                    // SQL queries
-                    string findbookquery = "SELECT bookid, genre, status FROM books WHERE booktitle = @booktitle AND author = @author AND volume = @volume AND status = 'Available'";
-
-                    string insertborrowed = "INSERT INTO borrowedbooks (bookid, booktitle, genre, volume, borrow_date, username) VALUES (@bookid, @booktitle, @genre, @volume, @borrow_date, @username)";
-
-                    string updateBookStatus = "UPDATE books SET status = 'Borrowed' WHERE bookid = @bookid AND status = 'Available'";
-
-                    // Find the book based on title, author, and volume
-                    using (SqlCommand findBookCmd = new SqlCommand(findbookquery, conn))
+                    // Check if the book is available
+                    string findBookQuery = "SELECT status FROM books WHERE bookid = @bookid AND status = 'Available'";
+                    using (SqlCommand findBookCmd = new SqlCommand(findBookQuery, conn))
                     {
-                        findBookCmd.Parameters.AddWithValue("@booktitle", booktitle);
-                        findBookCmd.Parameters.AddWithValue("@author", author);
-                        findBookCmd.Parameters.AddWithValue("@volume", volumeNumber);
+                        findBookCmd.Parameters.AddWithValue("@bookid", bookID);
 
-                        using (SqlDataReader reader = findBookCmd.ExecuteReader())
+                        object status = findBookCmd.ExecuteScalar();
+                        if (status == null || status.ToString() != "Available")
                         {
-                            if (!reader.Read())
-                            {
-                                MessageBox.Show("No matching book found or all copies are already borrowed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-
-                            bookID = reader.GetString(0);
-                            genre = reader.GetString(1);
-                            status = reader.GetString(2);
+                            MessageBox.Show("The selected book is not available for borrowing.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
                     }
 
-                    // If a valid book copy was found, borrow it
-                    if (!string.IsNullOrEmpty(bookID) && status == "Available")
+                    // Insert into the borrowedbooks table
+                    string insertBorrowedQuery = "INSERT INTO borrowedbooks (bookid, booktitle, genre, volume, borrow_date, username) " +
+                                                 "VALUES (@bookid, @booktitle, @genre, @volume, @borrow_date, @username)";
+
+                    using (SqlCommand insertBorrowCmd = new SqlCommand(insertBorrowedQuery, conn))
                     {
-                        // Insert the borrowed book record
-                        using (SqlCommand insertBorrowCmd = new SqlCommand(insertborrowed, conn))
-                        {
-                            insertBorrowCmd.Parameters.AddWithValue("@bookid", bookID);
-                            insertBorrowCmd.Parameters.AddWithValue("@booktitle", booktitle);
-                            insertBorrowCmd.Parameters.AddWithValue("@genre", genre);
-                            insertBorrowCmd.Parameters.AddWithValue("@volume", volumeNumber);
-                            insertBorrowCmd.Parameters.AddWithValue("@borrow_date", borrowDate); // Use selected date
-                            insertBorrowCmd.Parameters.AddWithValue("@username", username);
+                        insertBorrowCmd.Parameters.AddWithValue("@bookid", bookID);
+                        insertBorrowCmd.Parameters.AddWithValue("@booktitle", bookTitle);
+                        insertBorrowCmd.Parameters.AddWithValue("@genre", genre);
+                        insertBorrowCmd.Parameters.AddWithValue("@volume", volume);
+                        insertBorrowCmd.Parameters.AddWithValue("@borrow_date", borrowDate);
+                        insertBorrowCmd.Parameters.AddWithValue("@username", username);
 
-                            insertBorrowCmd.ExecuteNonQuery();
-                        }
-
-                        // Update the status of the specific book copy (bookid)
-                        using (SqlCommand updateBookCmd = new SqlCommand(updateBookStatus, conn))
-                        {
-                            updateBookCmd.Parameters.AddWithValue("@bookid", bookID);
-                            updateBookCmd.ExecuteNonQuery();
-                        }
-
-                        MessageBox.Show("Book borrowed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        string inserthistoryquery = @"INSERT INTO user_history (username, bookid, booktitle, borrow_date, genre, status) VALUES (@username, @bookid, @booktitle, @borrow_date, @genre, 'Pending');";
-
-                        using (SqlCommand insertHistoryCmd = new SqlCommand(inserthistoryquery, conn))
-                        {
-                            insertHistoryCmd.Parameters.AddWithValue("@username", username);
-                            insertHistoryCmd.Parameters.AddWithValue("@bookid", bookID);
-                            insertHistoryCmd.Parameters.AddWithValue("@booktitle", booktitle);
-                            insertHistoryCmd.Parameters.AddWithValue("@borrow_date", borrowDate);
-                            insertHistoryCmd.Parameters.AddWithValue("@genre", genre);
-                            insertHistoryCmd.ExecuteNonQuery();
-                        }
+                        insertBorrowCmd.ExecuteNonQuery();
                     }
-                    else
+
+                    // Update the status of the book in the books table
+                    string updateBookStatusQuery = "UPDATE books SET status = 'Borrowed' WHERE bookid = @bookid";
+                    using (SqlCommand updateBookCmd = new SqlCommand(updateBookStatusQuery, conn))
                     {
-                        MessageBox.Show("The book is not available for borrowing.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        updateBookCmd.Parameters.AddWithValue("@bookid", bookID);
+                        updateBookCmd.ExecuteNonQuery();
                     }
+
+                    // Insert into user_history table
+                    string insertHistoryQuery = "INSERT INTO user_history (username, bookid, booktitle, borrow_date, genre, status) " +
+                                                 "VALUES (@username, @bookid, @booktitle, @borrow_date, @genre, 'Pending')";
+
+                    using (SqlCommand insertHistoryCmd = new SqlCommand(insertHistoryQuery, conn))
+                    {
+                        insertHistoryCmd.Parameters.AddWithValue("@username", username);
+                        insertHistoryCmd.Parameters.AddWithValue("@bookid", bookID);
+                        insertHistoryCmd.Parameters.AddWithValue("@booktitle", bookTitle);
+                        insertHistoryCmd.Parameters.AddWithValue("@borrow_date", borrowDate);
+                        insertHistoryCmd.Parameters.AddWithValue("@genre", genre);
+                        insertHistoryCmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Book borrowed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Reload the available books list
+                    LoadAvailableBooks();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void LoadAvailableBooks() 
+        {
+            SqlConnection connection = classcon.GetConnection();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM books WHERE status = 'Available'", connection);
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(_username))
+                {
+                    MessageBox.Show("Username is null or empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@username", _username);
+
+                connection.Open();
+                int rowsAffected = dataAdapter.Fill(dataTable);
+
+                if (rowsAffected == 0)
+                {
+                    MessageBox.Show("You have no borrowed book/s.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                dgvBorrowBooks.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -170,6 +225,29 @@ namespace BookSystem
             UserDashboard dashboard = new UserDashboard(_username);
             this.Close();
             dashboard.Show();
+        }
+
+        private void frmBorrow_Load(object sender, EventArgs e)
+        {
+            LoadAvailableBooks();
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                UserDashboard uDB = new UserDashboard(_username);
+                this.Close();
+                uDB.Show();
+            }
+        }
+
+        private void txtBooktitle_TextChanged(object sender, EventArgs e)
+        {
+            string query = txtBb.Text.Trim();
+            LoadBooks(query);
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
