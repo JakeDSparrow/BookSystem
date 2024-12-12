@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -127,6 +128,11 @@ namespace BookSystem
                 {
                     connection.Open();
 
+                    if (quantity == 0)
+                    {
+                        throw new NoZeroException("Quantity cannot be zero.");
+                    }
+
                     for (int i = 1; i <= quantity; i++) // Loops to handle each "unit" of each book
                     {
                         string uniqueBookID = $"{baseBookID}-{i}"; // generate unique bookid 
@@ -145,13 +151,23 @@ namespace BookSystem
 
                     MessageBox.Show("Books added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clearStuff();
+                    frmAdmin admin = new frmAdmin();
+                    this.Close();
+                    admin.Show();
                 }
             }
-            catch (Exception ex)
+            catch (NoZeroException nze)
             {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(nze.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }     
+        }
+        public class NoZeroException : Exception
+        {
+            public NoZeroException(string quantity) : base(quantity)
+            {
             }
         }
+
 
 
         private void btnAdd_Click(object sender, EventArgs e)
