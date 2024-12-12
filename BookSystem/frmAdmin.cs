@@ -222,9 +222,7 @@ namespace BookSystem
 
             if (result == DialogResult.Yes)
             {
-                frmLogin frmLogin = new frmLogin();
-                this.Close();
-                frmLogin.Show();
+                Application.Exit();
             }
         }
 
@@ -251,6 +249,18 @@ namespace BookSystem
             frmArchive archive = new frmArchive();
             this.Hide();
             archive.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Booklat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frmLogin.Show();
+            }
         }
     }
 }

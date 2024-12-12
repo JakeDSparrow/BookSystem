@@ -73,7 +73,7 @@ namespace BookSystem
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                frmLogin.ShowDialog();
+                frmLogin.Show();
             }
         }
 
