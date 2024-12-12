@@ -119,8 +119,10 @@ namespace BookSystem
 
             string baseBookID = txtBookID.Text;
 
-            //updated query
-            string query = "INSERT INTO books (bookid, booktitle, author, genre, volume, quantity) VALUES (@bookid, @booktitle, @author, @genre, @volume, 1)";
+            // SQL query to insert a book
+            string insertQuery = "INSERT INTO books (bookid, booktitle, author, genre, volume, quantity) VALUES (@bookid, @booktitle, @author, @genre, @volume, 1)";
+            // SQL query to check if book ID already exists
+            string checkQuery = "SELECT booktitle FROM books WHERE bookid = @bookid";
 
             try
             {
@@ -133,11 +135,34 @@ namespace BookSystem
                         throw new NoZeroException("Quantity cannot be zero.");
                     }
 
-                    for (int i = 1; i <= quantity; i++) // Loops to handle each "unit" of each book
+                    for (int i = 1; i <= quantity; i++) // Loops to handle each "unit" of the book
                     {
-                        string uniqueBookID = $"{baseBookID}-{i}"; // generate unique bookid 
+                        string uniqueBookID = $"{baseBookID}-{i}"; // Generate unique bookid
 
-                        using (SqlCommand cmd = new SqlCommand(query, connection))
+                        // Check if bookid exists
+                        using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                        {
+                            checkCmd.Parameters.AddWithValue("@bookid", uniqueBookID);
+
+                            object existingTitle = checkCmd.ExecuteScalar();
+                            if (existingTitle != null)
+                            {
+                                string existingBookTitle = existingTitle.ToString();
+                                if (!existingBookTitle.Equals(txtBooktitle.Text, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    MessageBox.Show(
+                                        $"A book with ID '{uniqueBookID}' already exists with a different title ('{existingBookTitle}').",
+                                        "Error",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error
+                                    );
+                                    return;
+                                }
+                            }
+                        }
+
+                        // Insert new book if validation passes
+                        using (SqlCommand cmd = new SqlCommand(insertQuery, connection))
                         {
                             cmd.Parameters.AddWithValue("@bookid", uniqueBookID);
                             cmd.Parameters.AddWithValue("@booktitle", txtBooktitle.Text);
@@ -145,7 +170,11 @@ namespace BookSystem
                             cmd.Parameters.AddWithValue("@genre", cmbGenre.SelectedItem?.ToString() ?? "Unknown");
                             cmd.Parameters.AddWithValue("@volume", volume);
 
-                            cmd.ExecuteNonQuery();
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            if (rowsAffected <= 0)
+                            {
+                                throw new Exception($"Failed to insert book with ID '{uniqueBookID}'.");
+                            }
                         }
                     }
 
@@ -159,8 +188,13 @@ namespace BookSystem
             catch (NoZeroException nze)
             {
                 MessageBox.Show(nze.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }     
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         //Exception for zero quantity
         public class NoZeroException : Exception
         {
