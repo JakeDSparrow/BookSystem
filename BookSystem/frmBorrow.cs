@@ -79,22 +79,34 @@ namespace BookSystem
 
         private void BorrowBook(string username)
         {
-            // Check if a book is selected in the DataGridView
+            //Check if a book is selected in the DataGridView
             if (dgvBorrowBooks.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a book to borrow.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Retrieve the selected book details from the DataGridView
+            //Retrieve the selected book details from the DataGridView
             DataGridViewRow selectedRow = dgvBorrowBooks.SelectedRows[0];
+
+            //Validate if the row contains valid data
+            if (selectedRow.Cells["bookid"].Value == null ||
+                selectedRow.Cells["booktitle"].Value == null ||
+                selectedRow.Cells["author"].Value == null ||
+                selectedRow.Cells["genre"].Value == null ||
+                selectedRow.Cells["volume"].Value == null)
+            {
+                MessageBox.Show("The selected row contains invalid data. Please select a valid book.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string bookID = selectedRow.Cells["bookid"].Value.ToString();
             string bookTitle = selectedRow.Cells["booktitle"].Value.ToString();
             string author = selectedRow.Cells["author"].Value.ToString();
             string genre = selectedRow.Cells["genre"].Value.ToString();
             string volume = selectedRow.Cells["volume"].Value.ToString();
 
-            DateTime borrowDate = dtpBorrow.Value; // Get the borrowing date from the DateTimePicker
+            DateTime borrowDate = dtpBorrow.Value; //Get the borrowing date from the DateTimePicker
 
             try
             {
@@ -102,7 +114,7 @@ namespace BookSystem
                 {
                     conn.Open();
 
-                    // Check if the book is available
+                    //Check if the book is available
                     string findBookQuery = "SELECT status FROM books WHERE bookid = @bookid AND status = 'Available'";
                     using (SqlCommand findBookCmd = new SqlCommand(findBookQuery, conn))
                     {
@@ -116,7 +128,7 @@ namespace BookSystem
                         }
                     }
 
-                    // Insert into the borrowedbooks table
+                    //Insert into the borrowedbooks table
                     string insertBorrowedQuery = "INSERT INTO borrowedbooks (bookid, booktitle, genre, volume, borrow_date, username) " +
                                                  "VALUES (@bookid, @booktitle, @genre, @volume, @borrow_date, @username)";
 
@@ -132,7 +144,7 @@ namespace BookSystem
                         insertBorrowCmd.ExecuteNonQuery();
                     }
 
-                    // Update the status of the book in the books table
+                    //Update the status of the book in the books table
                     string updateBookStatusQuery = "UPDATE books SET status = 'Borrowed' WHERE bookid = @bookid";
                     using (SqlCommand updateBookCmd = new SqlCommand(updateBookStatusQuery, conn))
                     {
@@ -140,7 +152,7 @@ namespace BookSystem
                         updateBookCmd.ExecuteNonQuery();
                     }
 
-                    // Insert into user_history table
+                    //Insert into user_history table
                     string insertHistoryQuery = "INSERT INTO user_history (username, bookid, booktitle, borrow_date, genre, status) " +
                                                  "VALUES (@username, @bookid, @booktitle, @borrow_date, @genre, 'Pending')";
 
@@ -156,7 +168,7 @@ namespace BookSystem
 
                     MessageBox.Show("Book borrowed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Reload the available books list
+                    //Reload the available books list
                     LoadAvailableBooks();
                 }
             }
