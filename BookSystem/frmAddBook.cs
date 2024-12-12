@@ -161,6 +161,7 @@ namespace BookSystem
                 MessageBox.Show(nze.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }     
         }
+        //Exception for zero quantity
         public class NoZeroException : Exception
         {
             public NoZeroException(string quantity) : base(quantity)

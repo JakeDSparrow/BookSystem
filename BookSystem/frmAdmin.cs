@@ -97,8 +97,8 @@ namespace BookSystem
                 {
                    
                     string archiveQuery = @"
-                        INSERT INTO archives (bookid, booktitle, author, genre, volume) 
-                        VALUES (@bookid, @booktitle, @author, @genre, @volume)";
+                        INSERT INTO archives (bookid, booktitle, genre, author, volume) 
+                        VALUES (@bookid, @booktitle, @genre, @author, @volume)";
                     
                     string updateQuery = "UPDATE books SET status = @status WHERE bookid = @bookid";
                     
@@ -138,7 +138,7 @@ namespace BookSystem
                                     }
                                 }
 
-                                
+
                                 transaction.Commit();
                             }
                             catch (Exception ex)

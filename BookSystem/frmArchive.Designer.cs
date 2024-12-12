@@ -140,7 +140,6 @@
             this.btnRefresh.Size = new System.Drawing.Size(26, 26);
             this.btnRefresh.TabIndex = 20;
             this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frmArchive
             // 

@@ -48,15 +48,15 @@ namespace BookSystem
                     return;
                 }
 
-                // Insert these records into the "archives" table
+                /*// Insert these records into the "archives" table
                 string insertArchivesQuery = @"
-            INSERT INTO archives (bookid, booktitle, author, volume)
-            SELECT bookid, booktitle, author, volume
-            FROM books
-            WHERE status = 'Archived'
-            AND NOT EXISTS (
+                INSERT INTO archives (bookid, booktitle, author, volume)
+                SELECT bookid, booktitle, author, volume
+                FROM books
+                WHERE status = 'Archived'
+                AND NOT EXISTS (
                 SELECT 1 FROM archives WHERE archives.bookid = books.bookid
-            )";
+                )";
 
                 using (SqlCommand insertCommand = new SqlCommand(insertArchivesQuery, connection))
                 {
@@ -66,7 +66,7 @@ namespace BookSystem
                     {
                         MessageBox.Show($"{insertedRows} new archived book(s) added to the archives.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                }
+                }*/
 
                 // Display data from the "archives" table in the DataGridView
                 string selectArchivesQuery = "SELECT * FROM archives";
@@ -132,12 +132,6 @@ namespace BookSystem
             {
                 DeleteArchives();
             }
-        }
-
-        //paremove kuys
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }
