@@ -98,7 +98,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::BookSystem.Properties.Resources.Green_Simple_Book_Store_Logo__4_;
-            this.pictureBox3.Location = new System.Drawing.Point(462, -49);
+            this.pictureBox3.Location = new System.Drawing.Point(462, -55);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(235, 243);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

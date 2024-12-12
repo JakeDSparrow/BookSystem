@@ -129,6 +129,7 @@ namespace BookSystem
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             frmHistory history = new frmHistory(_username);
+            this.Hide();
             history.Show();
         }
     }
