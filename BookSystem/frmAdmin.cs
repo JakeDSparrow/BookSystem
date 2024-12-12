@@ -80,7 +80,7 @@ namespace BookSystem
             }
         }
 
-        private void RemoveBook() 
+        private void RemoveBook()
         {
             if (dgvBooks.SelectedRows.Count > 0)
             {
@@ -95,13 +95,13 @@ namespace BookSystem
 
                 if (result == DialogResult.Yes)
                 {
-                   
+
                     string archiveQuery = @"
-                        INSERT INTO archives (bookid, booktitle, genre, author, volume) 
-                        VALUES (@bookid, @booktitle, @genre, @author, @volume)";
-                    
+                        INSERT INTO archives (bookid, booktitle, author, genre, volume) 
+                        VALUES (@bookid, @booktitle, @author, @genre, @volume)";
+
                     string updateQuery = "UPDATE books SET status = @status WHERE bookid = @bookid";
-                    
+
                     using (SqlConnection con = classcon.GetConnection())
                     {
                         con.Open();
@@ -138,12 +138,13 @@ namespace BookSystem
                                     }
                                 }
 
-
                                 transaction.Commit();
+                                LoadRefresh();
+
                             }
                             catch (Exception ex)
                             {
-                                
+
                                 transaction.Rollback();
                                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
