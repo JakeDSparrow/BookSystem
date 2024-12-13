@@ -38,6 +38,13 @@ namespace BookSystem
                         return;
                     }
 
+                    // Checking if passwords match
+                    if (txtPassword.Text != txtConfirmPass.Text)
+                    {
+                        MessageBox.Show("Passwords do not match. Please confirm your password again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     // Checks if the user already exists 
                     string checkQuery = "SELECT COUNT(*) FROM users WHERE username = @username";
                     using (SqlCommand cmdCheck = new SqlCommand(checkQuery, cn))
