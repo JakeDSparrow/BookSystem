@@ -257,12 +257,6 @@ namespace BookSystem
             }
         }
 
-        private void txtBooktitle_TextChanged(object sender, EventArgs e)
-        {
-            string query = txtBb.Text.Trim();
-            LoadBooks(query);
-        }
-        
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -274,6 +268,12 @@ namespace BookSystem
                     SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
                 }
             }
+        }
+
+        private void txtBooktitle_TextChanged(object sender, EventArgs e)
+        {
+            string query = txtBb.Text.Trim();
+            LoadBooks(query);
         }
 
     }
