@@ -61,7 +61,7 @@ namespace BookSystem
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             frmReturn returnbook = new frmReturn(_username);
-            this.Close();
+            //this.Close();
             returnbook.ShowDialog();
         }
 
@@ -80,7 +80,7 @@ namespace BookSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             frmBorrow frmBorrow = new frmBorrow(_username);
-            this.Hide();
+            //this.Hide();
             frmBorrow.Show();
         }
 
@@ -129,7 +129,7 @@ namespace BookSystem
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             frmHistory history = new frmHistory(_username);
-            this.Hide();
+           // this.Hide();
             history.Show();
         }
     }

@@ -36,7 +36,7 @@ namespace BookSystem
         private void lblAddbook_Click(object sender, EventArgs e)
         {
             frmAddBook frmAddBook = new frmAddBook();
-            this.Hide();
+            //this.Hide();
             frmAddBook.Show();
         }
 
@@ -247,7 +247,7 @@ namespace BookSystem
         private void label1_Click(object sender, EventArgs e)
         {
             frmArchive archive = new frmArchive();
-            this.Hide();
+            //this.Hide();
             archive.Show();
         }
 
