@@ -36,7 +36,7 @@ namespace BookSystem
         private void lblAddbook_Click(object sender, EventArgs e)
         {
             frmAddBook frmAddBook = new frmAddBook();
-            //this.Hide();
+            this.Hide();
             frmAddBook.Show();
         }
 
@@ -248,7 +248,7 @@ namespace BookSystem
         private void label1_Click(object sender, EventArgs e)
         {
             frmArchive archive = new frmArchive();
-            //this.Hide();
+            this.Hide();
             archive.Show();
         }
 
@@ -261,6 +261,19 @@ namespace BookSystem
             {
                 this.Close();
                 frmLogin.Show();
+            }
+        }
+
+        private void frmAdmin_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                //check if the click was on the title bar
+                if (e.Clicks == 1 && e.Y <= this.Height && e.Y >= 0)
+                {
+                    ReleaseCapture();
+                    SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                }
             }
         }
     }

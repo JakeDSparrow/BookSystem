@@ -63,6 +63,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(604, 35);
             this.panel2.TabIndex = 19;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // btn_Minimize
             // 
@@ -97,9 +98,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
             this.label4.Location = new System.Drawing.Point(45, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 18);
+            this.label4.Size = new System.Drawing.Size(131, 18);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Booklat - Borrowed Book";
+            this.label4.Text = "Borrowed Book";
             // 
             // btnClose
             // 
@@ -128,8 +129,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBorrowedBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Booklat - Borrowed Book";
+            this.Text = "Borrowed Book";
             this.Load += new System.EventHandler(this.frmBorrowedBook_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmBorrowedBook_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowedBooks)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

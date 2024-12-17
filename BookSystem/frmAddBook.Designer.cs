@@ -335,6 +335,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Book";
             this.Load += new System.EventHandler(this.frmAddBook_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmAddBook_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

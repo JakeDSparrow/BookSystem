@@ -55,6 +55,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(604, 35);
             this.panel2.TabIndex = 17;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // btn_Minimize
             // 
@@ -153,10 +154,12 @@
             this.Controls.Add(this.dgvArchives);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmArchive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Booklat -Archives";
             this.Load += new System.EventHandler(this.frmArchive_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmArchive_MouseDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

@@ -107,10 +107,12 @@
             this.Controls.Add(this.dgvHistory);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Booklat: History";
+            this.Text = "History";
             this.Load += new System.EventHandler(this.frmHistory_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmHistory_MouseDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

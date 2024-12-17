@@ -64,6 +64,7 @@
             this.Name = "splashscreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Booklat";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splashscreen_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

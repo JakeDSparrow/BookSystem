@@ -270,6 +270,19 @@ namespace BookSystem
             }
         }
 
+        private void frmBorrow_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                //check if the click was on the title bar
+                if (e.Clicks == 1 && e.Y <= this.Height && e.Y >= 0)
+                {
+                    ReleaseCapture();
+                    SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                }
+            }
+        }
+
         private void txtBooktitle_TextChanged(object sender, EventArgs e)
         {
             string query = txtBb.Text.Trim();

@@ -162,8 +162,9 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmReturn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Booklat: Return Book";
+            this.Text = "Return Book";
             this.Load += new System.EventHandler(this.frmReturn_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmReturn_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrowedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

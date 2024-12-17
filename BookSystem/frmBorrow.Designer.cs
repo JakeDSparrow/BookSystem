@@ -229,8 +229,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBorrow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Booklat: Borrow a Book";
+            this.Text = "Borrow a Book";
             this.Load += new System.EventHandler(this.frmBorrow_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmBorrow_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
