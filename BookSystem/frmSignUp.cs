@@ -89,7 +89,7 @@ namespace BookSystem
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            //SIGN UP
+            //SIGN UP method
             Signup();
         }
 
