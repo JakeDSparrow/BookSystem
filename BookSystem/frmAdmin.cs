@@ -195,7 +195,7 @@ namespace BookSystem
         public void LoadRefresh()
         {
             SqlConnection connection = classcon.GetConnection();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Books WHERE status IN( 'Available', 'Borrowed')", connection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Books WHERE status = 'Available'", connection);
             DataTable dataTable = new DataTable();
 
             try

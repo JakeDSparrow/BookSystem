@@ -34,7 +34,7 @@ namespace BookSystem
 
         private void LoadBorrowedBooks()
         {
-            string query = "SELECT bookid, booktitle, genre, volume, quantity, borrow_date, username FROM borrowedbooks";
+            string query = "SELECT bookid, booktitle, genre, volume, borrow_date, username FROM borrowedbooks";
 
             try
             {
