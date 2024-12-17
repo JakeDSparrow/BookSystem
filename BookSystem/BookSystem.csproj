@@ -49,6 +49,12 @@
     <Compile Include="CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="frmBorrowedBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBorrowedBook.Designer.cs">
+      <DependentUpon>frmBorrowedBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArchive.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="SqlConnectionClass.cs" />
     <EmbeddedResource Include="frmArchive.resx">
       <DependentUpon>frmArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBorrowedBook.resx">
+      <DependentUpon>frmBorrowedBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHistory.resx">
       <DependentUpon>frmHistory.cs</DependentUpon>

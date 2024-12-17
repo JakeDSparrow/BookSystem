@@ -188,7 +188,8 @@ namespace BookSystem
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            LoadRefresh();
+            frmBorrowedBook brrw = new frmBorrowedBook();
+            brrw.Show();
         }
         //refresh to be cont.
         public void LoadRefresh()

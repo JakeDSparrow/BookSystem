@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.lblAddbook = new System.Windows.Forms.Label();
@@ -56,22 +56,22 @@
             // dgvBooks
             // 
             this.dgvBooks.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBooks.Location = new System.Drawing.Point(13, 110);
             this.dgvBooks.Name = "dgvBooks";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            this.dgvBooks.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dgvBooks.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvBooks.Size = new System.Drawing.Size(644, 243);
             this.dgvBooks.TabIndex = 0;
             // 
@@ -82,7 +82,7 @@
             this.lblAddbook.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblAddbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddbook.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAddbook.Location = new System.Drawing.Point(0, 0);
+            this.lblAddbook.Location = new System.Drawing.Point(3, 0);
             this.lblAddbook.Name = "lblAddbook";
             this.lblAddbook.Size = new System.Drawing.Size(165, 61);
             this.lblAddbook.TabIndex = 2;
@@ -96,7 +96,7 @@
             this.lblRemoveBook.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblRemoveBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRemoveBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRemoveBook.Location = new System.Drawing.Point(171, 0);
+            this.lblRemoveBook.Location = new System.Drawing.Point(174, 0);
             this.lblRemoveBook.Name = "lblRemoveBook";
             this.lblRemoveBook.Size = new System.Drawing.Size(176, 61);
             this.lblRemoveBook.TabIndex = 3;
@@ -132,15 +132,16 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImage = global::BookSystem.Properties.Resources.refresh;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRefresh.Location = new System.Drawing.Point(631, 69);
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRefresh.Location = new System.Drawing.Point(518, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(26, 26);
+            this.btnRefresh.Size = new System.Drawing.Size(155, 61);
             this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.Text = "Borrowed Book";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -222,7 +223,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(353, 0);
+            this.label1.Location = new System.Drawing.Point(356, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 61);
             this.label1.TabIndex = 17;
@@ -235,10 +236,11 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblRemoveBook);
+            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.lblAddbook);
             this.panel1.Location = new System.Drawing.Point(0, 417);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(510, 61);
+            this.panel1.Size = new System.Drawing.Size(685, 61);
             this.panel1.TabIndex = 18;
             // 
             // btnLogOut
@@ -252,7 +254,7 @@
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(538, 427);
+            this.btnLogOut.Location = new System.Drawing.Point(554, 61);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(119, 42);
             this.btnLogOut.TabIndex = 19;
@@ -269,7 +271,6 @@
             this.ClientSize = new System.Drawing.Size(685, 478);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvBooks);

@@ -200,25 +200,11 @@
         rkJggg==
 </value>
   </data>
-  <metadata name="libraryminiDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="btnLogOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAASVJREFUSEvtl0FqwlAURSMF7aQTZw66ACdOsp/aTdSt2K6iImg30xUUki3Ec+OT
-        aJ+BhvxnBvXAlbz/5R7kKyZZVVWvpCSpUecya8Pe8EbyxFmR0jQeNkVuYzLUqWIbPdqEu7g3dM7Ij42e
-        WhsgFvQu7NJz9IZ84icystFTa2PEG/JJxrZ0iawQIX4m32RHJrbcwKKIOuN2OQsiRCzoPsn3pJEziDCx
-        oN/LuRChYoHjXP74JzH7c/JOPnpGZy22XcRrcq2sS7qJU4Dj8px5Ebf6cjU/Ky5EmJhuLxUMIkRM73Wp
-        YEEkF9PZLhUsigjxFxnkT2JKHmz01Nq4Mx7kRmCYWx91qthGjzbhf4n1CKPHDb0xZdRZmMbD5pJEPLQV
-        5MU0v8iyA2gBk9N+p5gtAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAABAAkAEBAAAAAAIABoBAAAlgAAABgYAAAAACAAiAkAAP4EAAAgIAAAAAAgAKgQAACGDgAAMDAAAAAA
-        IACoJQAALh8AAEBAAAAAACAAKEIAANZEAABISAAAAAAgAIhUAAD+hgAAYGAAAAAAIAColAAAhtsAAICA
-        AAAAACAAKAgBAC5wAQANDQAAAAAADciLAABWeAIAKAAAABAAAAAgAAAAAQAgAAAAAAAABAAAww4AAMMO
+        AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA
+        IACoJQAALh8AAEBAAAABACAAKEIAANZEAABISAAAAQAgAIhUAAD+hgAAYGAAAAEAIAColAAAhtsAAICA
+        AAABACAAKAgBAC5wAQAAAAAAAQAgAMiLAABWeAIAKAAAABAAAAAgAAAAAQAgAAAAAAAABAAAww4AAMMO
         AAAAAAAAAAAAAEQbIf9EGyH/Qxkf/0IYHv9CGB7/Qhge/0IYHv9DGiD/Qxkf/0IZH/9CGR//Qxkf/0IY
         Hf9EGiD/Qxkf/04nLf85DRT/Og8V/0EXHf9DGyH/Qxsh/0MbIf9CGiH/PRMZ/0EXHf9BGB//QRge/0EX
         Hv9FHST/PxUb/zcKEf9EGiD/PBAW/zsQF/89Fx7/SSQr/1QxN/9HISj/US40/0QdI/88Fx3/RyMp/0kk
