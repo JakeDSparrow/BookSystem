@@ -36,7 +36,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.dgvArchives = new System.Windows.Forms.DataGridView();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchives)).BeginInit();
@@ -115,7 +114,7 @@
             this.dgvArchives.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArchives.Location = new System.Drawing.Point(12, 51);
             this.dgvArchives.Name = "dgvArchives";
-            this.dgvArchives.Size = new System.Drawing.Size(547, 215);
+            this.dgvArchives.Size = new System.Drawing.Size(579, 215);
             this.dgvArchives.TabIndex = 18;
             // 
             // btnClear
@@ -129,19 +128,6 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImage = global::BookSystem.Properties.Resources.refresh;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRefresh.Location = new System.Drawing.Point(565, 51);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(26, 26);
-            this.btnRefresh.TabIndex = 20;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            // 
             // frmArchive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,7 +135,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
             this.BackgroundImage = global::BookSystem.Properties.Resources.White_and_Light_Blue_Illustrative_Creative_Literature_Project_Presentation;
             this.ClientSize = new System.Drawing.Size(604, 307);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.dgvArchives);
             this.Controls.Add(this.panel2);
@@ -177,6 +162,5 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dgvArchives;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }

@@ -44,7 +44,7 @@
             // 
             this.btnSignup.BackColor = System.Drawing.SystemColors.Control;
             this.btnSignup.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignup.Location = new System.Drawing.Point(208, 297);
+            this.btnSignup.Location = new System.Drawing.Point(150, 285);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(95, 29);
             this.btnSignup.TabIndex = 4;
@@ -58,7 +58,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(163, 130);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(192, 26);
+            this.txtUsername.Size = new System.Drawing.Size(207, 26);
             this.txtUsername.TabIndex = 5;
             // 
             // txtPassword
@@ -67,16 +67,16 @@
             this.txtPassword.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(163, 178);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(192, 26);
+            this.txtPassword.Size = new System.Drawing.Size(207, 26);
             this.txtPassword.TabIndex = 6;
             // 
             // txtConfirmPass
             // 
             this.txtConfirmPass.BackColor = System.Drawing.SystemColors.Control;
             this.txtConfirmPass.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPass.Location = new System.Drawing.Point(163, 236);
+            this.txtConfirmPass.Location = new System.Drawing.Point(163, 226);
             this.txtConfirmPass.Name = "txtConfirmPass";
-            this.txtConfirmPass.Size = new System.Drawing.Size(192, 26);
+            this.txtConfirmPass.Size = new System.Drawing.Size(207, 26);
             this.txtConfirmPass.TabIndex = 7;
             // 
             // label1
@@ -109,7 +109,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 240);
+            this.label3.Location = new System.Drawing.Point(5, 230);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 17);
             this.label3.TabIndex = 3;
@@ -132,7 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(398, 365);
+            this.ClientSize = new System.Drawing.Size(388, 350);
             this.Controls.Add(this.txtConfirmPass);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);

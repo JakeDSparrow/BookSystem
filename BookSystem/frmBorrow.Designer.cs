@@ -199,7 +199,7 @@
             this.dgvBorrowBooks.Location = new System.Drawing.Point(79, 91);
             this.dgvBorrowBooks.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvBorrowBooks.Name = "dgvBorrowBooks";
-            this.dgvBorrowBooks.Size = new System.Drawing.Size(513, 278);
+            this.dgvBorrowBooks.Size = new System.Drawing.Size(546, 278);
             this.dgvBorrowBooks.TabIndex = 30;
             // 
             // button1
@@ -209,10 +209,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.Location = new System.Drawing.Point(329, 61);
+            this.button1.Location = new System.Drawing.Point(334, 60);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 26);
+            this.button1.Size = new System.Drawing.Size(24, 25);
             this.button1.TabIndex = 31;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;

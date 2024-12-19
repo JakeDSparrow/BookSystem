@@ -55,7 +55,7 @@
             // 
             // dgvBooks
             // 
-            this.dgvBooks.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvBooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(17)))), ((int)(((byte)(59)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,7 +73,7 @@
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dgvBooks.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBooks.Size = new System.Drawing.Size(751, 262);
+            this.dgvBooks.Size = new System.Drawing.Size(771, 307);
             this.dgvBooks.TabIndex = 0;
             // 
             // lblAddbook
