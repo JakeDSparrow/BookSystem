@@ -37,8 +37,8 @@ namespace BookSystem
 
         private void Login()
         {
-            username = txtUsername.Text;
-            password = txtPassword.Text;
+            username = txtUsername.Text.Trim();
+            password = txtPassword.Text.Trim();
 
 
             if (IsValidUser(username, password))

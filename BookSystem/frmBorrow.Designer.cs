@@ -53,9 +53,10 @@
             // 
             this.txtBb.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBb.ForeColor = System.Drawing.Color.Gray;
-            this.txtBb.Location = new System.Drawing.Point(68, 56);
+            this.txtBb.Location = new System.Drawing.Point(79, 60);
+            this.txtBb.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtBb.Name = "txtBb";
-            this.txtBb.Size = new System.Drawing.Size(240, 25);
+            this.txtBb.Size = new System.Drawing.Size(279, 25);
             this.txtBb.TabIndex = 15;
             this.txtBb.TextChanged += new System.EventHandler(this.txtBooktitle_TextChanged);
             // 
@@ -65,9 +66,10 @@
             this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBorrow.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrow.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBorrow.Location = new System.Drawing.Point(402, 392);
+            this.btnBorrow.Location = new System.Drawing.Point(469, 422);
+            this.btnBorrow.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBorrow.Name = "btnBorrow";
-            this.btnBorrow.Size = new System.Drawing.Size(106, 35);
+            this.btnBorrow.Size = new System.Drawing.Size(124, 38);
             this.btnBorrow.TabIndex = 14;
             this.btnBorrow.Text = "Borrow Book";
             this.btnBorrow.UseVisualStyleBackColor = true;
@@ -78,9 +80,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::BookSystem.Properties.Resources.Green_Simple_Book_Store_Logo__76_x_89_px___7_1;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 90);
+            this.pictureBox1.Size = new System.Drawing.Size(102, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -90,18 +93,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(171, 56);
+            this.label2.Location = new System.Drawing.Point(200, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 14);
             this.label2.TabIndex = 22;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BookSystem.Properties.Resources.Green_Simple_Book_Store_Logo__76_x_89_px___15_;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 320);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 345);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(98, 69);
+            this.pictureBox2.Size = new System.Drawing.Size(114, 74);
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
             // 
@@ -111,9 +116,10 @@
             this.dtpBorrow.CalendarTitleForeColor = System.Drawing.Color.Gray;
             this.dtpBorrow.CalendarTrailingForeColor = System.Drawing.Color.Gray;
             this.dtpBorrow.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBorrow.Location = new System.Drawing.Point(68, 351);
+            this.dtpBorrow.Location = new System.Drawing.Point(79, 378);
+            this.dtpBorrow.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtpBorrow.Name = "dtpBorrow";
-            this.dtpBorrow.Size = new System.Drawing.Size(253, 22);
+            this.dtpBorrow.Size = new System.Drawing.Size(294, 22);
             this.dtpBorrow.TabIndex = 26;
             // 
             // panel2
@@ -125,9 +131,9 @@
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(547, 35);
+            this.panel2.Size = new System.Drawing.Size(638, 38);
             this.panel2.TabIndex = 29;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -139,10 +145,10 @@
             this.btn_Minimize.FlatAppearance.BorderSize = 0;
             this.btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Minimize.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Minimize.Location = new System.Drawing.Point(487, 0);
-            this.btn_Minimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Minimize.Location = new System.Drawing.Point(568, 0);
+            this.btn_Minimize.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_Minimize.Name = "btn_Minimize";
-            this.btn_Minimize.Size = new System.Drawing.Size(30, 35);
+            this.btn_Minimize.Size = new System.Drawing.Size(35, 38);
             this.btn_Minimize.TabIndex = 17;
             this.btn_Minimize.UseVisualStyleBackColor = true;
             // 
@@ -151,8 +157,9 @@
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(-2, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(41, 35);
+            this.pictureBox5.Size = new System.Drawing.Size(48, 38);
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
             // 
@@ -161,7 +168,8 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(184)))), ((int)(((byte)(254)))));
-            this.label4.Location = new System.Drawing.Point(45, 9);
+            this.label4.Location = new System.Drawing.Point(52, 10);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 18);
             this.label4.TabIndex = 1;
@@ -174,10 +182,10 @@
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(517, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(603, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 35);
+            this.btnClose.Size = new System.Drawing.Size(35, 38);
             this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
@@ -188,9 +196,10 @@
             this.dgvBorrowBooks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBorrowBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBorrowBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
-            this.dgvBorrowBooks.Location = new System.Drawing.Point(68, 87);
+            this.dgvBorrowBooks.Location = new System.Drawing.Point(79, 91);
+            this.dgvBorrowBooks.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvBorrowBooks.Name = "dgvBorrowBooks";
-            this.dgvBorrowBooks.Size = new System.Drawing.Size(440, 258);
+            this.dgvBorrowBooks.Size = new System.Drawing.Size(513, 278);
             this.dgvBorrowBooks.TabIndex = 30;
             // 
             // button1
@@ -200,21 +209,22 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.Location = new System.Drawing.Point(282, 57);
+            this.button1.Location = new System.Drawing.Point(329, 61);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 24);
+            this.button1.Size = new System.Drawing.Size(30, 26);
             this.button1.TabIndex = 31;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // frmBorrow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
             this.BackgroundImage = global::BookSystem.Properties.Resources.bg2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(547, 439);
+            this.ClientSize = new System.Drawing.Size(638, 473);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvBorrowBooks);
             this.Controls.Add(this.panel2);
@@ -225,8 +235,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmBorrow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Borrow a Book";

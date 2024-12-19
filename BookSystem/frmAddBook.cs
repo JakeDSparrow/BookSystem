@@ -94,11 +94,11 @@ namespace BookSystem
 
         private void AddBook()
         {
-            if (string.IsNullOrEmpty(txtBookID.Text) ||
-                string.IsNullOrEmpty(txtBooktitle.Text) ||
-                string.IsNullOrEmpty(txtAuthor.Text) ||
-                string.IsNullOrEmpty(txtVolume.Text) ||
-                string.IsNullOrEmpty(txtQuantity.Text))
+            if (string.IsNullOrEmpty(txtBookID.Text.Trim()) ||
+                string.IsNullOrEmpty(txtBooktitle.Text.Trim()) ||
+                string.IsNullOrEmpty(txtAuthor.Text.Trim()) ||
+                string.IsNullOrEmpty(txtVolume.Text.Trim()) ||
+                string.IsNullOrEmpty(txtQuantity.Text.Trim()))
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
