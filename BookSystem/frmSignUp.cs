@@ -111,6 +111,18 @@ namespace BookSystem
             Signup();
         }
 
+        private void cbShowpassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !cbShowpassword.Checked;
+            txtConfirmPass.UseSystemPasswordChar = !cbShowpassword.Checked;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            this.Close();
+            frmLogin.Show();
+        }
     }
 }
 

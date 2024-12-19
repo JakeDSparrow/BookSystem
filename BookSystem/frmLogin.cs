@@ -104,6 +104,11 @@ namespace BookSystem
             }
         }
 
+        private void cbShowpassword_CheckedChanged(object sender, EventArgs e)
+        {
+             txtPassword.UseSystemPasswordChar = !cbShowpassword.Checked;
+        }
+
         private bool IsValidUser(string admin, string password)
         {
             SqlConnectionClass dbConnection = new SqlConnectionClass();

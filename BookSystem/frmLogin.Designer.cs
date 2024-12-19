@@ -39,6 +39,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbShowpassword = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,7 +90,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(390, 404);
+            this.btnLogin.Location = new System.Drawing.Point(388, 424);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(88, 30);
@@ -103,7 +104,7 @@
             this.lblSignup.AutoSize = true;
             this.lblSignup.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSignup.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lblSignup.Location = new System.Drawing.Point(346, 457);
+            this.lblSignup.Location = new System.Drawing.Point(342, 476);
             this.lblSignup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSignup.Name = "lblSignup";
             this.lblSignup.Size = new System.Drawing.Size(178, 18);
@@ -158,12 +159,25 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // cbShowpassword
+            // 
+            this.cbShowpassword.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbShowpassword.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.cbShowpassword.Location = new System.Drawing.Point(449, 383);
+            this.cbShowpassword.Name = "cbShowpassword";
+            this.cbShowpassword.Size = new System.Drawing.Size(132, 24);
+            this.cbShowpassword.TabIndex = 0;
+            this.cbShowpassword.Text = "Show Password";
+            this.cbShowpassword.UseVisualStyleBackColor = true;
+            this.cbShowpassword.CheckedChanged += new System.EventHandler(this.cbShowpassword_CheckedChanged);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(16)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(847, 556);
+            this.Controls.Add(this.cbShowpassword);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblSignup);
@@ -201,6 +215,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.CheckBox cbShowpassword;
     }
 }
 
